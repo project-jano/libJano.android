@@ -1,0 +1,1 @@
+var packageSearchIndex = [{"l":"io.jano.mobile.libs.android","url":"io/jano/mobile/libs/android/package-summary.html"}, {"l":"io.jano.mobile.libs.android.models","url":"io/jano/mobile/libs/android/models/package-summary.html"}, {"l":"All packages","url":"index.html"}]

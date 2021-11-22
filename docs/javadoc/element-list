@@ -1,0 +1,7 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:io.jano.mobile.libs.android.models/CertificateSigningRequest.Companion///PointingToDeclaration/io/jano/mobile/libs/android/models/CertificateSigningRequest.Companion.html
+$dokka.location:io.jano.mobile.libs.android.models/Device.Companion///PointingToDeclaration/io/jano/mobile/libs/android/models/Device.Companion.html
+io.jano.mobile.libs.android
+io.jano.mobile.libs.android.models
+
