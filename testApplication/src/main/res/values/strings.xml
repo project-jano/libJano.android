@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Jano DevApp</string>
+    <string name="generate_certificate">New certificate</string>
+    <string name="sign_certificate">Sign Certificate</string>
+    <string name="local_echo">Local Echo (Encryption Test)</string>
+    <string name="title_activity_view_secured_payload">View SecuredPayload</string>
+    <string name="decode_payload">Decode secure payload</string>
+    <string name="enter_ciphered_payload">Enter Ciphered Payload</string>
+    <string name="decode">Decode</string>
+    <string name="verify">Verify</string>
+    <string name="verify_signature">Verify Signature</string>
+</resources>

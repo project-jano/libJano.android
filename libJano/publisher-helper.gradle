@@ -1,0 +1,148 @@
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+def isReleaseBuild() {
+    return VERSION_NAME.contains("SNAPSHOT") == false
+}
+
+def getReleaseRepositoryUrl() {
+    return hasProperty('RELEASE_REPOSITORY_URL') ? RELEASE_REPOSITORY_URL
+            : "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+}
+
+def getSnapshotRepositoryUrl() {
+    return hasProperty('SNAPSHOT_REPOSITORY_URL') ? SNAPSHOT_REPOSITORY_URL
+            : "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+}
+
+def getRepositoryUsername() {
+    return hasProperty('NEXUS_USERNAME') ? NEXUS_USERNAME : ""
+}
+
+def getRepositoryPassword() {
+    return hasProperty('NEXUS_PASSWORD') ? NEXUS_PASSWORD : ""
+}
+
+task androidJavadoc(type: Javadoc) {
+    if (plugins.hasPlugin('android-library')) {
+        source = android.sourceSets.main.java.srcDirs
+        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+        android.libraryVariants.all { variant ->
+            if (variant.name == 'release') {
+                owner.classpath += variant.javaCompileProvider.get().classpath
+            }
+        }
+    }
+    else {
+        source = sourceSets.main.allJava
+        classpath += configurations.runtimeClasspath
+        classpath += configurations.compileClasspath
+    }
+    exclude '**/R.html', '**/R.*.html', '**/index.html'
+    options.encoding 'utf-8'
+    options {
+        addStringOption 'docencoding', 'utf-8'
+        addStringOption 'charset', 'utf-8'
+        links 'https://docs.oracle.com/javase/7/docs/api/'
+        links 'https://d.android.com/reference'
+        links 'https://developer.android.com/reference/androidx/'
+    }
+}
+
+task androidJavadocJar(type: Jar, dependsOn: androidJavadoc) {
+    archiveClassifier.set('javadoc')
+    from androidJavadoc.destinationDir
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+task javaSourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    if (plugins.hasPlugin('android-library')) {
+        from android.sourceSets.main.java.srcDirs
+    }
+    else {
+        from sourceSets.main.allSource
+    }
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                if (plugins.hasPlugin('android-library')) {
+                    from components.release
+                }
+                else if (plugins.hasPlugin('java')) {
+                    from components.java
+                    jar.preserveFileTimestamps = false
+                    jar.reproducibleFileOrder = true
+                }
+
+                artifact androidJavadocJar
+                artifact javaSourcesJar
+
+                groupId = GROUP
+                version = VERSION_NAME
+
+                pom {
+                    name = POM_NAME
+                    packaging = POM_PACKAGING
+                    description = POM_DESCRIPTION
+                    url = POM_URL
+
+                    scm {
+                        url = POM_SCM_URL
+                        connection = POM_SCM_CONNECTION
+                        developerConnection = POM_SCM_DEV_CONNECTION
+                    }
+
+                    license {
+                        name = POM_LICENCE_NAME
+                        url = POM_LICENCE_URL
+                        distribution = POM_LICENCE_DIST
+                    }
+                    developers {
+                        developer {
+                            id = POM_DEVELOPER_ID
+                            name = POM_DEVELOPER_NAME
+                            email =POM_DEVELOPER_MAIL
+                        }
+                    }
+                }
+            }
+        }
+        repositories {
+            maven {
+                name = "sonatype"
+
+                def releasesRepoUrl = getReleaseRepositoryUrl()
+                def snapshotsRepoUrl = getSnapshotRepositoryUrl()
+                url = isReleaseBuild() ? releasesRepoUrl : snapshotsRepoUrl
+
+                credentials {
+                    username getRepositoryUsername()
+                    password getRepositoryPassword()
+                }
+            }
+        }
+    }
+}
+
+
+nexusPublishing {
+    repositories {
+        sonatype {  //only for users registered in Sonatype after 24 Feb 2021
+            nexusUrl.set(uri(getReleaseRepositoryUrl()))
+            snapshotRepositoryUrl.set(uri(getSnapshotRepositoryUrl))
+            username = getRepositoryUsername()
+            password = getRepositoryPassword()
+        }
+    }
+}
+
+signing {
+    sign publishing.publications
+}

@@ -1,0 +1,1552 @@
+[
+  {
+    "name": "ClientError()",
+    "description": "io.jano.mobile.libs.android.infrastructure.ResponseType.ClientError",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-response-type/-client-error/index.html",
+    "searchKeys": [
+      "ClientError",
+      "ClientError()",
+      "io.jano.mobile.libs.android.infrastructure.ResponseType.ClientError"
+    ]
+  },
+  {
+    "name": "DELETE()",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestMethod.DELETE",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-method/-d-e-l-e-t-e/index.html",
+    "searchKeys": [
+      "DELETE",
+      "DELETE()",
+      "io.jano.mobile.libs.android.infrastructure.RequestMethod.DELETE"
+    ]
+  },
+  {
+    "name": "GET()",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestMethod.GET",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-method/-g-e-t/index.html",
+    "searchKeys": [
+      "GET",
+      "GET()",
+      "io.jano.mobile.libs.android.infrastructure.RequestMethod.GET"
+    ]
+  },
+  {
+    "name": "HEAD()",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestMethod.HEAD",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-method/-h-e-a-d/index.html",
+    "searchKeys": [
+      "HEAD",
+      "HEAD()",
+      "io.jano.mobile.libs.android.infrastructure.RequestMethod.HEAD"
+    ]
+  },
+  {
+    "name": "Informational()",
+    "description": "io.jano.mobile.libs.android.infrastructure.ResponseType.Informational",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-response-type/-informational/index.html",
+    "searchKeys": [
+      "Informational",
+      "Informational()",
+      "io.jano.mobile.libs.android.infrastructure.ResponseType.Informational"
+    ]
+  },
+  {
+    "name": "LOCAL(\"local\")",
+    "description": "io.jano.mobile.libs.android.models.Destination.LOCAL",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-destination/-l-o-c-a-l/index.html",
+    "searchKeys": [
+      "LOCAL",
+      "LOCAL(\"local\")",
+      "io.jano.mobile.libs.android.models.Destination.LOCAL"
+    ]
+  },
+  {
+    "name": "OPTIONS()",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestMethod.OPTIONS",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-method/-o-p-t-i-o-n-s/index.html",
+    "searchKeys": [
+      "OPTIONS",
+      "OPTIONS()",
+      "io.jano.mobile.libs.android.infrastructure.RequestMethod.OPTIONS"
+    ]
+  },
+  {
+    "name": "PATCH()",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestMethod.PATCH",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-method/-p-a-t-c-h/index.html",
+    "searchKeys": [
+      "PATCH",
+      "PATCH()",
+      "io.jano.mobile.libs.android.infrastructure.RequestMethod.PATCH"
+    ]
+  },
+  {
+    "name": "POST()",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestMethod.POST",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-method/-p-o-s-t/index.html",
+    "searchKeys": [
+      "POST",
+      "POST()",
+      "io.jano.mobile.libs.android.infrastructure.RequestMethod.POST"
+    ]
+  },
+  {
+    "name": "PUT()",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestMethod.PUT",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-method/-p-u-t/index.html",
+    "searchKeys": [
+      "PUT",
+      "PUT()",
+      "io.jano.mobile.libs.android.infrastructure.RequestMethod.PUT"
+    ]
+  },
+  {
+    "name": "REMOTE(\"remote\")",
+    "description": "io.jano.mobile.libs.android.models.Destination.REMOTE",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-destination/-r-e-m-o-t-e/index.html",
+    "searchKeys": [
+      "REMOTE",
+      "REMOTE(\"remote\")",
+      "io.jano.mobile.libs.android.models.Destination.REMOTE"
+    ]
+  },
+  {
+    "name": "Redirection()",
+    "description": "io.jano.mobile.libs.android.infrastructure.ResponseType.Redirection",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-response-type/-redirection/index.html",
+    "searchKeys": [
+      "Redirection",
+      "Redirection()",
+      "io.jano.mobile.libs.android.infrastructure.ResponseType.Redirection"
+    ]
+  },
+  {
+    "name": "ServerError()",
+    "description": "io.jano.mobile.libs.android.infrastructure.ResponseType.ServerError",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-response-type/-server-error/index.html",
+    "searchKeys": [
+      "ServerError",
+      "ServerError()",
+      "io.jano.mobile.libs.android.infrastructure.ResponseType.ServerError"
+    ]
+  },
+  {
+    "name": "Success()",
+    "description": "io.jano.mobile.libs.android.infrastructure.ResponseType.Success",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-response-type/-success/index.html",
+    "searchKeys": [
+      "Success",
+      "Success()",
+      "io.jano.mobile.libs.android.infrastructure.ResponseType.Success"
+    ]
+  },
+  {
+    "name": "abstract class ApiInfrastructureResponse<T>(responseType: ResponseType)",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiInfrastructureResponse",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-infrastructure-response/index.html",
+    "searchKeys": [
+      "ApiInfrastructureResponse",
+      "abstract class ApiInfrastructureResponse<T>(responseType: ResponseType)",
+      "io.jano.mobile.libs.android.infrastructure.ApiInfrastructureResponse"
+    ]
+  },
+  {
+    "name": "abstract val headers: Map<String, List<String>>",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiInfrastructureResponse.headers",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-infrastructure-response/headers.html",
+    "searchKeys": [
+      "headers",
+      "abstract val headers: Map<String, List<String>>",
+      "io.jano.mobile.libs.android.infrastructure.ApiInfrastructureResponse.headers"
+    ]
+  },
+  {
+    "name": "abstract val statusCode: Int",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiInfrastructureResponse.statusCode",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-infrastructure-response/status-code.html",
+    "searchKeys": [
+      "statusCode",
+      "abstract val statusCode: Int",
+      "io.jano.mobile.libs.android.infrastructure.ApiInfrastructureResponse.statusCode"
+    ]
+  },
+  {
+    "name": "class CertificateAlreadyExistsException(userId: String, deviceId: String, alias: String) : Throwable",
+    "description": "io.jano.mobile.libs.android.exceptions.CertificateAlreadyExistsException",
+    "location": "lib-jano/io.jano.mobile.libs.android.exceptions/-certificate-already-exists-exception/index.html",
+    "searchKeys": [
+      "CertificateAlreadyExistsException",
+      "class CertificateAlreadyExistsException(userId: String, deviceId: String, alias: String) : Throwable",
+      "io.jano.mobile.libs.android.exceptions.CertificateAlreadyExistsException"
+    ]
+  },
+  {
+    "name": "class ClientError<T>(body: Any?, statusCode: Int, headers: Map<String, List<String>>) : ApiInfrastructureResponse<T> ",
+    "description": "io.jano.mobile.libs.android.infrastructure.ClientError",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-client-error/index.html",
+    "searchKeys": [
+      "ClientError",
+      "class ClientError<T>(body: Any?, statusCode: Int, headers: Map<String, List<String>>) : ApiInfrastructureResponse<T> ",
+      "io.jano.mobile.libs.android.infrastructure.ClientError"
+    ]
+  },
+  {
+    "name": "class Constants",
+    "description": "io.jano.mobile.libs.android.security.Constants",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/index.html",
+    "searchKeys": [
+      "Constants",
+      "class Constants",
+      "io.jano.mobile.libs.android.security.Constants"
+    ]
+  },
+  {
+    "name": "class Informational<T>(statusText: String, statusCode: Int, headers: Map<String, List<String>>) : ApiInfrastructureResponse<T> ",
+    "description": "io.jano.mobile.libs.android.infrastructure.Informational",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-informational/index.html",
+    "searchKeys": [
+      "Informational",
+      "class Informational<T>(statusText: String, statusCode: Int, headers: Map<String, List<String>>) : ApiInfrastructureResponse<T> ",
+      "io.jano.mobile.libs.android.infrastructure.Informational"
+    ]
+  },
+  {
+    "name": "class InvalidKeyStoreEntry(userId: String, deviceId: String, alias: String) : Throwable",
+    "description": "io.jano.mobile.libs.android.exceptions.InvalidKeyStoreEntry",
+    "location": "lib-jano/io.jano.mobile.libs.android.exceptions/-invalid-key-store-entry/index.html",
+    "searchKeys": [
+      "InvalidKeyStoreEntry",
+      "class InvalidKeyStoreEntry(userId: String, deviceId: String, alias: String) : Throwable",
+      "io.jano.mobile.libs.android.exceptions.InvalidKeyStoreEntry"
+    ]
+  },
+  {
+    "name": "class KeyStoreEntryNotFound(userId: String, deviceId: String, alias: String) : Throwable",
+    "description": "io.jano.mobile.libs.android.exceptions.KeyStoreEntryNotFound",
+    "location": "lib-jano/io.jano.mobile.libs.android.exceptions/-key-store-entry-not-found/index.html",
+    "searchKeys": [
+      "KeyStoreEntryNotFound",
+      "class KeyStoreEntryNotFound(userId: String, deviceId: String, alias: String) : Throwable",
+      "io.jano.mobile.libs.android.exceptions.KeyStoreEntryNotFound"
+    ]
+  },
+  {
+    "name": "class LocalDateAdapter",
+    "description": "io.jano.mobile.libs.android.infrastructure.LocalDateAdapter",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-local-date-adapter/index.html",
+    "searchKeys": [
+      "LocalDateAdapter",
+      "class LocalDateAdapter",
+      "io.jano.mobile.libs.android.infrastructure.LocalDateAdapter"
+    ]
+  },
+  {
+    "name": "class LocalDateTimeAdapter",
+    "description": "io.jano.mobile.libs.android.infrastructure.LocalDateTimeAdapter",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-local-date-time-adapter/index.html",
+    "searchKeys": [
+      "LocalDateTimeAdapter",
+      "class LocalDateTimeAdapter",
+      "io.jano.mobile.libs.android.infrastructure.LocalDateTimeAdapter"
+    ]
+  },
+  {
+    "name": "class Redirection<T>(statusCode: Int, headers: Map<String, List<String>>) : ApiInfrastructureResponse<T> ",
+    "description": "io.jano.mobile.libs.android.infrastructure.Redirection",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-redirection/index.html",
+    "searchKeys": [
+      "Redirection",
+      "class Redirection<T>(statusCode: Int, headers: Map<String, List<String>>) : ApiInfrastructureResponse<T> ",
+      "io.jano.mobile.libs.android.infrastructure.Redirection"
+    ]
+  },
+  {
+    "name": "class SecurityAPI(basePath: String) : ApiClient",
+    "description": "io.jano.mobile.libs.android.apis.SecurityAPI",
+    "location": "lib-jano/io.jano.mobile.libs.android.apis/-security-a-p-i/index.html",
+    "searchKeys": [
+      "SecurityAPI",
+      "class SecurityAPI(basePath: String) : ApiClient",
+      "io.jano.mobile.libs.android.apis.SecurityAPI"
+    ]
+  },
+  {
+    "name": "class SecurityManager",
+    "description": "io.jano.mobile.libs.android.security.SecurityManager",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-manager/index.html",
+    "searchKeys": [
+      "SecurityManager",
+      "class SecurityManager",
+      "io.jano.mobile.libs.android.security.SecurityManager"
+    ]
+  },
+  {
+    "name": "class ServerError<T>(message: String?, body: Any?, statusCode: Int, headers: Map<String, List<String>>) : ApiInfrastructureResponse<T> ",
+    "description": "io.jano.mobile.libs.android.infrastructure.ServerError",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-server-error/index.html",
+    "searchKeys": [
+      "ServerError",
+      "class ServerError<T>(message: String?, body: Any?, statusCode: Int, headers: Map<String, List<String>>) : ApiInfrastructureResponse<T> ",
+      "io.jano.mobile.libs.android.infrastructure.ServerError"
+    ]
+  },
+  {
+    "name": "class Success<T>(data: T, statusCode: Int, headers: Map<String, List<String>>) : ApiInfrastructureResponse<T> ",
+    "description": "io.jano.mobile.libs.android.infrastructure.Success",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-success/index.html",
+    "searchKeys": [
+      "Success",
+      "class Success<T>(data: T, statusCode: Int, headers: Map<String, List<String>>) : ApiInfrastructureResponse<T> ",
+      "io.jano.mobile.libs.android.infrastructure.Success"
+    ]
+  },
+  {
+    "name": "class UserAPI(basePath: String) : ApiClient",
+    "description": "io.jano.mobile.libs.android.apis.UserAPI",
+    "location": "lib-jano/io.jano.mobile.libs.android.apis/-user-a-p-i/index.html",
+    "searchKeys": [
+      "UserAPI",
+      "class UserAPI(basePath: String) : ApiClient",
+      "io.jano.mobile.libs.android.apis.UserAPI"
+    ]
+  },
+  {
+    "name": "const val ANDROID_KEYSTORE_PROVIDER_NAME: String",
+    "description": "io.jano.mobile.libs.android.security.Constants.Companion.ANDROID_KEYSTORE_PROVIDER_NAME",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-companion/-a-n-d-r-o-i-d_-k-e-y-s-t-o-r-e_-p-r-o-v-i-d-e-r_-n-a-m-e.html",
+    "searchKeys": [
+      "ANDROID_KEYSTORE_PROVIDER_NAME",
+      "const val ANDROID_KEYSTORE_PROVIDER_NAME: String",
+      "io.jano.mobile.libs.android.security.Constants.Companion.ANDROID_KEYSTORE_PROVIDER_NAME"
+    ]
+  },
+  {
+    "name": "const val CERT_BEGIN: String",
+    "description": "io.jano.mobile.libs.android.security.Constants.Companion.CERT_BEGIN",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-companion/-c-e-r-t_-b-e-g-i-n.html",
+    "searchKeys": [
+      "CERT_BEGIN",
+      "const val CERT_BEGIN: String",
+      "io.jano.mobile.libs.android.security.Constants.Companion.CERT_BEGIN"
+    ]
+  },
+  {
+    "name": "const val CERT_END: String",
+    "description": "io.jano.mobile.libs.android.security.Constants.Companion.CERT_END",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-companion/-c-e-r-t_-e-n-d.html",
+    "searchKeys": [
+      "CERT_END",
+      "const val CERT_END: String",
+      "io.jano.mobile.libs.android.security.Constants.Companion.CERT_END"
+    ]
+  },
+  {
+    "name": "const val CIPHER_TRANSFORMATION: String",
+    "description": "io.jano.mobile.libs.android.security.Constants.Companion.CIPHER_TRANSFORMATION",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-companion/-c-i-p-h-e-r_-t-r-a-n-s-f-o-r-m-a-t-i-o-n.html",
+    "searchKeys": [
+      "CIPHER_TRANSFORMATION",
+      "const val CIPHER_TRANSFORMATION: String",
+      "io.jano.mobile.libs.android.security.Constants.Companion.CIPHER_TRANSFORMATION"
+    ]
+  },
+  {
+    "name": "const val CSR_BEGIN: String",
+    "description": "io.jano.mobile.libs.android.security.Constants.Companion.CSR_BEGIN",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-companion/-c-s-r_-b-e-g-i-n.html",
+    "searchKeys": [
+      "CSR_BEGIN",
+      "const val CSR_BEGIN: String",
+      "io.jano.mobile.libs.android.security.Constants.Companion.CSR_BEGIN"
+    ]
+  },
+  {
+    "name": "const val CSR_END: String",
+    "description": "io.jano.mobile.libs.android.security.Constants.Companion.CSR_END",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-companion/-c-s-r_-e-n-d.html",
+    "searchKeys": [
+      "CSR_END",
+      "const val CSR_END: String",
+      "io.jano.mobile.libs.android.security.Constants.Companion.CSR_END"
+    ]
+  },
+  {
+    "name": "const val KEY_SIZE_IN_BITS: Int",
+    "description": "io.jano.mobile.libs.android.security.Constants.Companion.KEY_SIZE_IN_BITS",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-companion/-k-e-y_-s-i-z-e_-i-n_-b-i-t-s.html",
+    "searchKeys": [
+      "KEY_SIZE_IN_BITS",
+      "const val KEY_SIZE_IN_BITS: Int",
+      "io.jano.mobile.libs.android.security.Constants.Companion.KEY_SIZE_IN_BITS"
+    ]
+  },
+  {
+    "name": "const val SIGNATURE_ALGORITHM: String",
+    "description": "io.jano.mobile.libs.android.security.Constants.Companion.SIGNATURE_ALGORITHM",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-companion/-s-i-g-n-a-t-u-r-e_-a-l-g-o-r-i-t-h-m.html",
+    "searchKeys": [
+      "SIGNATURE_ALGORITHM",
+      "const val SIGNATURE_ALGORITHM: String",
+      "io.jano.mobile.libs.android.security.Constants.Companion.SIGNATURE_ALGORITHM"
+    ]
+  },
+  {
+    "name": "const val UTF_8: String",
+    "description": "io.jano.mobile.libs.android.security.Constants.Companion.UTF_8",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-companion/-u-t-f_8.html",
+    "searchKeys": [
+      "UTF_8",
+      "const val UTF_8: String",
+      "io.jano.mobile.libs.android.security.Constants.Companion.UTF_8"
+    ]
+  },
+  {
+    "name": "data class CertificateSigningRequest(keyId: String, cipher: String, request: String, device: Device?, default: Boolean)",
+    "description": "io.jano.mobile.libs.android.models.CertificateSigningRequest",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificate-signing-request/index.html",
+    "searchKeys": [
+      "CertificateSigningRequest",
+      "data class CertificateSigningRequest(keyId: String, cipher: String, request: String, device: Device?, default: Boolean)",
+      "io.jano.mobile.libs.android.models.CertificateSigningRequest"
+    ]
+  },
+  {
+    "name": "data class CertificateSigningResponse(chain: String)",
+    "description": "io.jano.mobile.libs.android.models.CertificateSigningResponse",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificate-signing-response/index.html",
+    "searchKeys": [
+      "CertificateSigningResponse",
+      "data class CertificateSigningResponse(chain: String)",
+      "io.jano.mobile.libs.android.models.CertificateSigningResponse"
+    ]
+  },
+  {
+    "name": "data class Certificates(certificates: List<String>)",
+    "description": "io.jano.mobile.libs.android.models.Certificates",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificates/index.html",
+    "searchKeys": [
+      "Certificates",
+      "data class Certificates(certificates: List<String>)",
+      "io.jano.mobile.libs.android.models.Certificates"
+    ]
+  },
+  {
+    "name": "data class Device(platform: String, userAgent: String)",
+    "description": "io.jano.mobile.libs.android.models.Device",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-device/index.html",
+    "searchKeys": [
+      "Device",
+      "data class Device(platform: String, userAgent: String)",
+      "io.jano.mobile.libs.android.models.Device"
+    ]
+  },
+  {
+    "name": "data class RequestConfig(method: RequestMethod, path: String, headers: Map<String, String>, query: Map<String, List<String>>)",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestConfig",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-config/index.html",
+    "searchKeys": [
+      "RequestConfig",
+      "data class RequestConfig(method: RequestMethod, path: String, headers: Map<String, String>, query: Map<String, List<String>>)",
+      "io.jano.mobile.libs.android.infrastructure.RequestConfig"
+    ]
+  },
+  {
+    "name": "data class SecurityOptions(userAuthenticationRequired: Boolean, userPresenceRequired: Boolean, unlockedDeviceRequired: Boolean, invalidatedByBiometricEnrollment: Boolean, strongBoxBacked: Boolean)",
+    "description": "io.jano.mobile.libs.android.security.SecurityOptions",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-options/index.html",
+    "searchKeys": [
+      "SecurityOptions",
+      "data class SecurityOptions(userAuthenticationRequired: Boolean, userPresenceRequired: Boolean, unlockedDeviceRequired: Boolean, invalidatedByBiometricEnrollment: Boolean, strongBoxBacked: Boolean)",
+      "io.jano.mobile.libs.android.security.SecurityOptions"
+    ]
+  },
+  {
+    "name": "enum Destination : Enum<Destination> ",
+    "description": "io.jano.mobile.libs.android.models.Destination",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-destination/index.html",
+    "searchKeys": [
+      "Destination",
+      "enum Destination : Enum<Destination> ",
+      "io.jano.mobile.libs.android.models.Destination"
+    ]
+  },
+  {
+    "name": "enum RequestMethod : Enum<RequestMethod> ",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestMethod",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-method/index.html",
+    "searchKeys": [
+      "RequestMethod",
+      "enum RequestMethod : Enum<RequestMethod> ",
+      "io.jano.mobile.libs.android.infrastructure.RequestMethod"
+    ]
+  },
+  {
+    "name": "enum ResponseType : Enum<ResponseType> ",
+    "description": "io.jano.mobile.libs.android.infrastructure.ResponseType",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-response-type/index.html",
+    "searchKeys": [
+      "ResponseType",
+      "enum ResponseType : Enum<ResponseType> ",
+      "io.jano.mobile.libs.android.infrastructure.ResponseType"
+    ]
+  },
+  {
+    "name": "fun <T> Success(data: T, statusCode: Int = -1, headers: Map<String, List<String>> = mapOf())",
+    "description": "io.jano.mobile.libs.android.infrastructure.Success.Success",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-success/-success.html",
+    "searchKeys": [
+      "Success",
+      "fun <T> Success(data: T, statusCode: Int = -1, headers: Map<String, List<String>> = mapOf())",
+      "io.jano.mobile.libs.android.infrastructure.Success.Success"
+    ]
+  },
+  {
+    "name": "fun <T> setOnce(defaultValue: T? = null): ReadWriteProperty<Any?, T>",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApplicationDelegates.setOnce",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-application-delegates/set-once.html",
+    "searchKeys": [
+      "setOnce",
+      "fun <T> setOnce(defaultValue: T? = null): ReadWriteProperty<Any?, T>",
+      "io.jano.mobile.libs.android.infrastructure.ApplicationDelegates.setOnce"
+    ]
+  },
+  {
+    "name": "fun <T> toMultiValue(items: List<T>, collectionFormat: String, map: (item: Any?) -> String = defaultMultiValueConverter): List<String>",
+    "description": "io.jano.mobile.libs.android.infrastructure.toMultiValue",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/to-multi-value.html",
+    "searchKeys": [
+      "toMultiValue",
+      "fun <T> toMultiValue(items: List<T>, collectionFormat: String, map: (item: Any?) -> String = defaultMultiValueConverter): List<String>",
+      "io.jano.mobile.libs.android.infrastructure.toMultiValue"
+    ]
+  },
+  {
+    "name": "fun ApiClient(baseUrl: String)",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiClient.ApiClient",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-client/-api-client.html",
+    "searchKeys": [
+      "ApiClient",
+      "fun ApiClient(baseUrl: String)",
+      "io.jano.mobile.libs.android.infrastructure.ApiClient.ApiClient"
+    ]
+  },
+  {
+    "name": "fun ApiInfrastructureResponse(responseType: ResponseType)",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiInfrastructureResponse.ApiInfrastructureResponse",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-infrastructure-response/-api-infrastructure-response.html",
+    "searchKeys": [
+      "ApiInfrastructureResponse",
+      "fun ApiInfrastructureResponse(responseType: ResponseType)",
+      "io.jano.mobile.libs.android.infrastructure.ApiInfrastructureResponse.ApiInfrastructureResponse"
+    ]
+  },
+  {
+    "name": "fun CertificateAlreadyExistsException(userId: String, deviceId: String, alias: String)",
+    "description": "io.jano.mobile.libs.android.exceptions.CertificateAlreadyExistsException.CertificateAlreadyExistsException",
+    "location": "lib-jano/io.jano.mobile.libs.android.exceptions/-certificate-already-exists-exception/-certificate-already-exists-exception.html",
+    "searchKeys": [
+      "CertificateAlreadyExistsException",
+      "fun CertificateAlreadyExistsException(userId: String, deviceId: String, alias: String)",
+      "io.jano.mobile.libs.android.exceptions.CertificateAlreadyExistsException.CertificateAlreadyExistsException"
+    ]
+  },
+  {
+    "name": "fun CertificateSigningRequest(keyId: String, cipher: String, request: String, device: Device? = null, default: Boolean = false)",
+    "description": "io.jano.mobile.libs.android.models.CertificateSigningRequest.CertificateSigningRequest",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificate-signing-request/-certificate-signing-request.html",
+    "searchKeys": [
+      "CertificateSigningRequest",
+      "fun CertificateSigningRequest(keyId: String, cipher: String, request: String, device: Device? = null, default: Boolean = false)",
+      "io.jano.mobile.libs.android.models.CertificateSigningRequest.CertificateSigningRequest"
+    ]
+  },
+  {
+    "name": "fun CertificateSigningResponse(chain: String)",
+    "description": "io.jano.mobile.libs.android.models.CertificateSigningResponse.CertificateSigningResponse",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificate-signing-response/-certificate-signing-response.html",
+    "searchKeys": [
+      "CertificateSigningResponse",
+      "fun CertificateSigningResponse(chain: String)",
+      "io.jano.mobile.libs.android.models.CertificateSigningResponse.CertificateSigningResponse"
+    ]
+  },
+  {
+    "name": "fun Certificates(certificates: List<String>)",
+    "description": "io.jano.mobile.libs.android.models.Certificates.Certificates",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificates/-certificates.html",
+    "searchKeys": [
+      "Certificates",
+      "fun Certificates(certificates: List<String>)",
+      "io.jano.mobile.libs.android.models.Certificates.Certificates"
+    ]
+  },
+  {
+    "name": "fun ClientError(body: Any? = null, statusCode: Int = -1, headers: Map<String, List<String>> = mapOf())",
+    "description": "io.jano.mobile.libs.android.infrastructure.ClientError.ClientError",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-client-error/-client-error.html",
+    "searchKeys": [
+      "ClientError",
+      "fun ClientError(body: Any? = null, statusCode: Int = -1, headers: Map<String, List<String>> = mapOf())",
+      "io.jano.mobile.libs.android.infrastructure.ClientError.ClientError"
+    ]
+  },
+  {
+    "name": "fun ClientException()",
+    "description": "io.jano.mobile.libs.android.infrastructure.ClientException.ClientException",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-client-exception/-client-exception.html",
+    "searchKeys": [
+      "ClientException",
+      "fun ClientException()",
+      "io.jano.mobile.libs.android.infrastructure.ClientException.ClientException"
+    ]
+  },
+  {
+    "name": "fun ClientException(message: String)",
+    "description": "io.jano.mobile.libs.android.infrastructure.ClientException.ClientException",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-client-exception/-client-exception.html",
+    "searchKeys": [
+      "ClientException",
+      "fun ClientException(message: String)",
+      "io.jano.mobile.libs.android.infrastructure.ClientException.ClientException"
+    ]
+  },
+  {
+    "name": "fun Constants()",
+    "description": "io.jano.mobile.libs.android.security.Constants.Constants",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-constants.html",
+    "searchKeys": [
+      "Constants",
+      "fun Constants()",
+      "io.jano.mobile.libs.android.security.Constants.Constants"
+    ]
+  },
+  {
+    "name": "fun Device(platform: String = \"mobile\", userAgent: String)",
+    "description": "io.jano.mobile.libs.android.models.Device.Device",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-device/-device.html",
+    "searchKeys": [
+      "Device",
+      "fun Device(platform: String = \"mobile\", userAgent: String)",
+      "io.jano.mobile.libs.android.models.Device.Device"
+    ]
+  },
+  {
+    "name": "fun Informational(statusText: String, statusCode: Int = -1, headers: Map<String, List<String>> = mapOf())",
+    "description": "io.jano.mobile.libs.android.infrastructure.Informational.Informational",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-informational/-informational.html",
+    "searchKeys": [
+      "Informational",
+      "fun Informational(statusText: String, statusCode: Int = -1, headers: Map<String, List<String>> = mapOf())",
+      "io.jano.mobile.libs.android.infrastructure.Informational.Informational"
+    ]
+  },
+  {
+    "name": "fun InvalidKeyStoreEntry(userId: String, deviceId: String, alias: String)",
+    "description": "io.jano.mobile.libs.android.exceptions.InvalidKeyStoreEntry.InvalidKeyStoreEntry",
+    "location": "lib-jano/io.jano.mobile.libs.android.exceptions/-invalid-key-store-entry/-invalid-key-store-entry.html",
+    "searchKeys": [
+      "InvalidKeyStoreEntry",
+      "fun InvalidKeyStoreEntry(userId: String, deviceId: String, alias: String)",
+      "io.jano.mobile.libs.android.exceptions.InvalidKeyStoreEntry.InvalidKeyStoreEntry"
+    ]
+  },
+  {
+    "name": "fun KeyStoreEntryNotFound(userId: String, deviceId: String, alias: String)",
+    "description": "io.jano.mobile.libs.android.exceptions.KeyStoreEntryNotFound.KeyStoreEntryNotFound",
+    "location": "lib-jano/io.jano.mobile.libs.android.exceptions/-key-store-entry-not-found/-key-store-entry-not-found.html",
+    "searchKeys": [
+      "KeyStoreEntryNotFound",
+      "fun KeyStoreEntryNotFound(userId: String, deviceId: String, alias: String)",
+      "io.jano.mobile.libs.android.exceptions.KeyStoreEntryNotFound.KeyStoreEntryNotFound"
+    ]
+  },
+  {
+    "name": "fun LocalDateAdapter()",
+    "description": "io.jano.mobile.libs.android.infrastructure.LocalDateAdapter.LocalDateAdapter",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-local-date-adapter/-local-date-adapter.html",
+    "searchKeys": [
+      "LocalDateAdapter",
+      "fun LocalDateAdapter()",
+      "io.jano.mobile.libs.android.infrastructure.LocalDateAdapter.LocalDateAdapter"
+    ]
+  },
+  {
+    "name": "fun LocalDateTimeAdapter()",
+    "description": "io.jano.mobile.libs.android.infrastructure.LocalDateTimeAdapter.LocalDateTimeAdapter",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-local-date-time-adapter/-local-date-time-adapter.html",
+    "searchKeys": [
+      "LocalDateTimeAdapter",
+      "fun LocalDateTimeAdapter()",
+      "io.jano.mobile.libs.android.infrastructure.LocalDateTimeAdapter.LocalDateTimeAdapter"
+    ]
+  },
+  {
+    "name": "fun Redirection(statusCode: Int = -1, headers: Map<String, List<String>> = mapOf())",
+    "description": "io.jano.mobile.libs.android.infrastructure.Redirection.Redirection",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-redirection/-redirection.html",
+    "searchKeys": [
+      "Redirection",
+      "fun Redirection(statusCode: Int = -1, headers: Map<String, List<String>> = mapOf())",
+      "io.jano.mobile.libs.android.infrastructure.Redirection.Redirection"
+    ]
+  },
+  {
+    "name": "fun RequestConfig(method: RequestMethod, path: String, headers: Map<String, String> = mapOf(), query: Map<String, List<String>> = mapOf())",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestConfig.RequestConfig",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-config/-request-config.html",
+    "searchKeys": [
+      "RequestConfig",
+      "fun RequestConfig(method: RequestMethod, path: String, headers: Map<String, String> = mapOf(), query: Map<String, List<String>> = mapOf())",
+      "io.jano.mobile.libs.android.infrastructure.RequestConfig.RequestConfig"
+    ]
+  },
+  {
+    "name": "fun SecurityAPI(basePath: String = \"http://localhost/v1\")",
+    "description": "io.jano.mobile.libs.android.apis.SecurityAPI.SecurityAPI",
+    "location": "lib-jano/io.jano.mobile.libs.android.apis/-security-a-p-i/-security-a-p-i.html",
+    "searchKeys": [
+      "SecurityAPI",
+      "fun SecurityAPI(basePath: String = \"http://localhost/v1\")",
+      "io.jano.mobile.libs.android.apis.SecurityAPI.SecurityAPI"
+    ]
+  },
+  {
+    "name": "fun SecurityManager()",
+    "description": "io.jano.mobile.libs.android.security.SecurityManager.SecurityManager",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-manager/-security-manager.html",
+    "searchKeys": [
+      "SecurityManager",
+      "fun SecurityManager()",
+      "io.jano.mobile.libs.android.security.SecurityManager.SecurityManager"
+    ]
+  },
+  {
+    "name": "fun SecurityOptions(userAuthenticationRequired: Boolean = true, userPresenceRequired: Boolean = false, unlockedDeviceRequired: Boolean = false, invalidatedByBiometricEnrollment: Boolean = false, strongBoxBacked: Boolean = false)",
+    "description": "io.jano.mobile.libs.android.security.SecurityOptions.SecurityOptions",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-options/-security-options.html",
+    "searchKeys": [
+      "SecurityOptions",
+      "fun SecurityOptions(userAuthenticationRequired: Boolean = true, userPresenceRequired: Boolean = false, unlockedDeviceRequired: Boolean = false, invalidatedByBiometricEnrollment: Boolean = false, strongBoxBacked: Boolean = false)",
+      "io.jano.mobile.libs.android.security.SecurityOptions.SecurityOptions"
+    ]
+  },
+  {
+    "name": "fun ServerError(message: String? = null, body: Any? = null, statusCode: Int = -1, headers: Map<String, List<String>>)",
+    "description": "io.jano.mobile.libs.android.infrastructure.ServerError.ServerError",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-server-error/-server-error.html",
+    "searchKeys": [
+      "ServerError",
+      "fun ServerError(message: String? = null, body: Any? = null, statusCode: Int = -1, headers: Map<String, List<String>>)",
+      "io.jano.mobile.libs.android.infrastructure.ServerError.ServerError"
+    ]
+  },
+  {
+    "name": "fun ServerException()",
+    "description": "io.jano.mobile.libs.android.infrastructure.ServerException.ServerException",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-server-exception/-server-exception.html",
+    "searchKeys": [
+      "ServerException",
+      "fun ServerException()",
+      "io.jano.mobile.libs.android.infrastructure.ServerException.ServerException"
+    ]
+  },
+  {
+    "name": "fun ServerException(message: String)",
+    "description": "io.jano.mobile.libs.android.infrastructure.ServerException.ServerException",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-server-exception/-server-exception.html",
+    "searchKeys": [
+      "ServerException",
+      "fun ServerException(message: String)",
+      "io.jano.mobile.libs.android.infrastructure.ServerException.ServerException"
+    ]
+  },
+  {
+    "name": "fun UserAPI(basePath: String = \"http://localhost/v1\")",
+    "description": "io.jano.mobile.libs.android.apis.UserAPI.UserAPI",
+    "location": "lib-jano/io.jano.mobile.libs.android.apis/-user-a-p-i/-user-a-p-i.html",
+    "searchKeys": [
+      "UserAPI",
+      "fun UserAPI(basePath: String = \"http://localhost/v1\")",
+      "io.jano.mobile.libs.android.apis.UserAPI.UserAPI"
+    ]
+  },
+  {
+    "name": "fun collectionDelimiter(collectionFormat: String): String",
+    "description": "io.jano.mobile.libs.android.infrastructure.collectionDelimiter",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/collection-delimiter.html",
+    "searchKeys": [
+      "collectionDelimiter",
+      "fun collectionDelimiter(collectionFormat: String): String",
+      "io.jano.mobile.libs.android.infrastructure.collectionDelimiter"
+    ]
+  },
+  {
+    "name": "fun decrypt(userId: String, deviceId: String, alias: String = DefaultAlias, cipheredText: String): Result<String>",
+    "description": "io.jano.mobile.libs.android.JanoSDK.decrypt",
+    "location": "lib-jano/io.jano.mobile.libs.android/-jano-s-d-k/decrypt.html",
+    "searchKeys": [
+      "decrypt",
+      "fun decrypt(userId: String, deviceId: String, alias: String = DefaultAlias, cipheredText: String): Result<String>",
+      "io.jano.mobile.libs.android.JanoSDK.decrypt"
+    ]
+  },
+  {
+    "name": "fun decrypt(userId: String, deviceId: String, alias: String, cipheredText: String): String",
+    "description": "io.jano.mobile.libs.android.security.SecurityManager.Companion.decrypt",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-manager/-companion/decrypt.html",
+    "searchKeys": [
+      "decrypt",
+      "fun decrypt(userId: String, deviceId: String, alias: String, cipheredText: String): String",
+      "io.jano.mobile.libs.android.security.SecurityManager.Companion.decrypt"
+    ]
+  },
+  {
+    "name": "fun encrypt(userId: String, deviceId: String, alias: String = DefaultAlias, message: String, destination: Destination = Destination.REMOTE): Result<String>",
+    "description": "io.jano.mobile.libs.android.JanoSDK.encrypt",
+    "location": "lib-jano/io.jano.mobile.libs.android/-jano-s-d-k/encrypt.html",
+    "searchKeys": [
+      "encrypt",
+      "fun encrypt(userId: String, deviceId: String, alias: String = DefaultAlias, message: String, destination: Destination = Destination.REMOTE): Result<String>",
+      "io.jano.mobile.libs.android.JanoSDK.encrypt"
+    ]
+  },
+  {
+    "name": "fun encrypt(userId: String, deviceId: String, alias: String, message: String, useServerCertificate: Boolean = true): String",
+    "description": "io.jano.mobile.libs.android.security.SecurityManager.Companion.encrypt",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-manager/-companion/encrypt.html",
+    "searchKeys": [
+      "encrypt",
+      "fun encrypt(userId: String, deviceId: String, alias: String, message: String, useServerCertificate: Boolean = true): String",
+      "io.jano.mobile.libs.android.security.SecurityManager.Companion.encrypt"
+    ]
+  },
+  {
+    "name": "fun fromJson(value: String): LocalDate",
+    "description": "io.jano.mobile.libs.android.infrastructure.LocalDateAdapter.fromJson",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-local-date-adapter/from-json.html",
+    "searchKeys": [
+      "fromJson",
+      "fun fromJson(value: String): LocalDate",
+      "io.jano.mobile.libs.android.infrastructure.LocalDateAdapter.fromJson"
+    ]
+  },
+  {
+    "name": "fun fromJson(value: String): LocalDateTime",
+    "description": "io.jano.mobile.libs.android.infrastructure.LocalDateTimeAdapter.fromJson",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-local-date-time-adapter/from-json.html",
+    "searchKeys": [
+      "fromJson",
+      "fun fromJson(value: String): LocalDateTime",
+      "io.jano.mobile.libs.android.infrastructure.LocalDateTimeAdapter.fromJson"
+    ]
+  },
+  {
+    "name": "fun fromLocalDevice(context: Context): Device",
+    "description": "io.jano.mobile.libs.android.models.Device.Companion.fromLocalDevice",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-device/-companion/from-local-device.html",
+    "searchKeys": [
+      "fromLocalDevice",
+      "fun fromLocalDevice(context: Context): Device",
+      "io.jano.mobile.libs.android.models.Device.Companion.fromLocalDevice"
+    ]
+  },
+  {
+    "name": "fun generateCertificate(context: Context, userId: String, deviceId: String, alias: String = DefaultAlias, issuer: String, subject: String, notBefore: Date = Date(), notAfter: Date = Calendar.getInstance().run {\n            add(Calendar.YEAR, 999)\n            time\n        }, options: SecurityOptions = DefaultSecurityOptions): Result<X509Certificate>",
+    "description": "io.jano.mobile.libs.android.JanoSDK.generateCertificate",
+    "location": "lib-jano/io.jano.mobile.libs.android/-jano-s-d-k/generate-certificate.html",
+    "searchKeys": [
+      "generateCertificate",
+      "fun generateCertificate(context: Context, userId: String, deviceId: String, alias: String = DefaultAlias, issuer: String, subject: String, notBefore: Date = Date(), notAfter: Date = Calendar.getInstance().run {\n            add(Calendar.YEAR, 999)\n            time\n        }, options: SecurityOptions = DefaultSecurityOptions): Result<X509Certificate>",
+      "io.jano.mobile.libs.android.JanoSDK.generateCertificate"
+    ]
+  },
+  {
+    "name": "fun generateCertificate(context: Context, userId: String, deviceId: String, alias: String, issuer: String, subject: String, notBefore: Date, notAfter: Date, options: SecurityOptions): PublicKey",
+    "description": "io.jano.mobile.libs.android.security.SecurityManager.Companion.generateCertificate",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-manager/-companion/generate-certificate.html",
+    "searchKeys": [
+      "generateCertificate",
+      "fun generateCertificate(context: Context, userId: String, deviceId: String, alias: String, issuer: String, subject: String, notBefore: Date, notAfter: Date, options: SecurityOptions): PublicKey",
+      "io.jano.mobile.libs.android.security.SecurityManager.Companion.generateCertificate"
+    ]
+  },
+  {
+    "name": "fun generateCertificateSigningRequest(userId: String, deviceId: String, alias: String): String",
+    "description": "io.jano.mobile.libs.android.security.SecurityManager.Companion.generateCertificateSigningRequest",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-manager/-companion/generate-certificate-signing-request.html",
+    "searchKeys": [
+      "generateCertificateSigningRequest",
+      "fun generateCertificateSigningRequest(userId: String, deviceId: String, alias: String): String",
+      "io.jano.mobile.libs.android.security.SecurityManager.Companion.generateCertificateSigningRequest"
+    ]
+  },
+  {
+    "name": "fun getCertificates(): Certificates",
+    "description": "io.jano.mobile.libs.android.apis.SecurityAPI.getCertificates",
+    "location": "lib-jano/io.jano.mobile.libs.android.apis/-security-a-p-i/get-certificates.html",
+    "searchKeys": [
+      "getCertificates",
+      "fun getCertificates(): Certificates",
+      "io.jano.mobile.libs.android.apis.SecurityAPI.getCertificates"
+    ]
+  },
+  {
+    "name": "fun getCertificates(userId: String, deviceId: String, alias: String = DefaultAlias): Result<List<X509Certificate>>",
+    "description": "io.jano.mobile.libs.android.JanoSDK.getCertificates",
+    "location": "lib-jano/io.jano.mobile.libs.android/-jano-s-d-k/get-certificates.html",
+    "searchKeys": [
+      "getCertificates",
+      "fun getCertificates(userId: String, deviceId: String, alias: String = DefaultAlias): Result<List<X509Certificate>>",
+      "io.jano.mobile.libs.android.JanoSDK.getCertificates"
+    ]
+  },
+  {
+    "name": "fun getCertificates(userId: String, deviceId: String, alias: String): List<X509Certificate>",
+    "description": "io.jano.mobile.libs.android.security.SecurityManager.Companion.getCertificates",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-manager/-companion/get-certificates.html",
+    "searchKeys": [
+      "getCertificates",
+      "fun getCertificates(userId: String, deviceId: String, alias: String): List<X509Certificate>",
+      "io.jano.mobile.libs.android.security.SecurityManager.Companion.getCertificates"
+    ]
+  },
+  {
+    "name": "fun hasCertificate(userId: String, deviceId: String, alias: String = DefaultAlias): Boolean",
+    "description": "io.jano.mobile.libs.android.JanoSDK.hasCertificate",
+    "location": "lib-jano/io.jano.mobile.libs.android/-jano-s-d-k/has-certificate.html",
+    "searchKeys": [
+      "hasCertificate",
+      "fun hasCertificate(userId: String, deviceId: String, alias: String = DefaultAlias): Boolean",
+      "io.jano.mobile.libs.android.JanoSDK.hasCertificate"
+    ]
+  },
+  {
+    "name": "fun hasCertificates(userId: String, deviceId: String, alias: String): Boolean",
+    "description": "io.jano.mobile.libs.android.security.SecurityManager.Companion.hasCertificates",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-manager/-companion/has-certificates.html",
+    "searchKeys": [
+      "hasCertificates",
+      "fun hasCertificates(userId: String, deviceId: String, alias: String): Boolean",
+      "io.jano.mobile.libs.android.security.SecurityManager.Companion.hasCertificates"
+    ]
+  },
+  {
+    "name": "fun requestCertificateSigning(context: Context, basePath: String, userId: String, deviceId: String, alias: String = DefaultAlias, defaultCertificate: Boolean = true): Result<List<X509Certificate>>",
+    "description": "io.jano.mobile.libs.android.JanoSDK.requestCertificateSigning",
+    "location": "lib-jano/io.jano.mobile.libs.android/-jano-s-d-k/request-certificate-signing.html",
+    "searchKeys": [
+      "requestCertificateSigning",
+      "fun requestCertificateSigning(context: Context, basePath: String, userId: String, deviceId: String, alias: String = DefaultAlias, defaultCertificate: Boolean = true): Result<List<X509Certificate>>",
+      "io.jano.mobile.libs.android.JanoSDK.requestCertificateSigning"
+    ]
+  },
+  {
+    "name": "fun setSignedCertificate(userId: String, deviceId: String, alias: String, signedCertificateChain: List<X509Certificate>)",
+    "description": "io.jano.mobile.libs.android.security.SecurityManager.Companion.setSignedCertificate",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-manager/-companion/set-signed-certificate.html",
+    "searchKeys": [
+      "setSignedCertificate",
+      "fun setSignedCertificate(userId: String, deviceId: String, alias: String, signedCertificateChain: List<X509Certificate>)",
+      "io.jano.mobile.libs.android.security.SecurityManager.Companion.setSignedCertificate"
+    ]
+  },
+  {
+    "name": "fun signCertificate(context: Context, alias: String, userId: String, deviceId: String, defaultCertificate: Boolean = true): CertificateSigningResponse",
+    "description": "io.jano.mobile.libs.android.apis.UserAPI.signCertificate",
+    "location": "lib-jano/io.jano.mobile.libs.android.apis/-user-a-p-i/sign-certificate.html",
+    "searchKeys": [
+      "signCertificate",
+      "fun signCertificate(context: Context, alias: String, userId: String, deviceId: String, defaultCertificate: Boolean = true): CertificateSigningResponse",
+      "io.jano.mobile.libs.android.apis.UserAPI.signCertificate"
+    ]
+  },
+  {
+    "name": "fun toJson(value: LocalDate): String",
+    "description": "io.jano.mobile.libs.android.infrastructure.LocalDateAdapter.toJson",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-local-date-adapter/to-json.html",
+    "searchKeys": [
+      "toJson",
+      "fun toJson(value: LocalDate): String",
+      "io.jano.mobile.libs.android.infrastructure.LocalDateAdapter.toJson"
+    ]
+  },
+  {
+    "name": "fun toJson(value: LocalDateTime): String",
+    "description": "io.jano.mobile.libs.android.infrastructure.LocalDateTimeAdapter.toJson",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-local-date-time-adapter/to-json.html",
+    "searchKeys": [
+      "toJson",
+      "fun toJson(value: LocalDateTime): String",
+      "io.jano.mobile.libs.android.infrastructure.LocalDateTimeAdapter.toJson"
+    ]
+  },
+  {
+    "name": "object ApplicationDelegates",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApplicationDelegates",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-application-delegates/index.html",
+    "searchKeys": [
+      "ApplicationDelegates",
+      "object ApplicationDelegates",
+      "io.jano.mobile.libs.android.infrastructure.ApplicationDelegates"
+    ]
+  },
+  {
+    "name": "object Companion",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiClient.Companion",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-client/-companion/index.html",
+    "searchKeys": [
+      "Companion",
+      "object Companion",
+      "io.jano.mobile.libs.android.infrastructure.ApiClient.Companion"
+    ]
+  },
+  {
+    "name": "object Companion",
+    "description": "io.jano.mobile.libs.android.infrastructure.ClientException.Companion",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-client-exception/-companion/index.html",
+    "searchKeys": [
+      "Companion",
+      "object Companion",
+      "io.jano.mobile.libs.android.infrastructure.ClientException.Companion"
+    ]
+  },
+  {
+    "name": "object Companion",
+    "description": "io.jano.mobile.libs.android.infrastructure.ServerException.Companion",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-server-exception/-companion/index.html",
+    "searchKeys": [
+      "Companion",
+      "object Companion",
+      "io.jano.mobile.libs.android.infrastructure.ServerException.Companion"
+    ]
+  },
+  {
+    "name": "object Companion",
+    "description": "io.jano.mobile.libs.android.models.Device.Companion",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-device/-companion/index.html",
+    "searchKeys": [
+      "Companion",
+      "object Companion",
+      "io.jano.mobile.libs.android.models.Device.Companion"
+    ]
+  },
+  {
+    "name": "object Companion",
+    "description": "io.jano.mobile.libs.android.security.Constants.Companion",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-constants/-companion/index.html",
+    "searchKeys": [
+      "Companion",
+      "object Companion",
+      "io.jano.mobile.libs.android.security.Constants.Companion"
+    ]
+  },
+  {
+    "name": "object Companion",
+    "description": "io.jano.mobile.libs.android.security.SecurityManager.Companion",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-manager/-companion/index.html",
+    "searchKeys": [
+      "Companion",
+      "object Companion",
+      "io.jano.mobile.libs.android.security.SecurityManager.Companion"
+    ]
+  },
+  {
+    "name": "object JanoSDK",
+    "description": "io.jano.mobile.libs.android.JanoSDK",
+    "location": "lib-jano/io.jano.mobile.libs.android/-jano-s-d-k/index.html",
+    "searchKeys": [
+      "JanoSDK",
+      "object JanoSDK",
+      "io.jano.mobile.libs.android.JanoSDK"
+    ]
+  },
+  {
+    "name": "object Serializer",
+    "description": "io.jano.mobile.libs.android.infrastructure.Serializer",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-serializer/index.html",
+    "searchKeys": [
+      "Serializer",
+      "object Serializer",
+      "io.jano.mobile.libs.android.infrastructure.Serializer"
+    ]
+  },
+  {
+    "name": "open class ApiClient(baseUrl: String)",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiClient",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-client/index.html",
+    "searchKeys": [
+      "ApiClient",
+      "open class ApiClient(baseUrl: String)",
+      "io.jano.mobile.libs.android.infrastructure.ApiClient"
+    ]
+  },
+  {
+    "name": "open class ClientException : RuntimeException",
+    "description": "io.jano.mobile.libs.android.infrastructure.ClientException",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-client-exception/index.html",
+    "searchKeys": [
+      "ClientException",
+      "open class ClientException : RuntimeException",
+      "io.jano.mobile.libs.android.infrastructure.ClientException"
+    ]
+  },
+  {
+    "name": "open class ServerException : RuntimeException",
+    "description": "io.jano.mobile.libs.android.infrastructure.ServerException",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-server-exception/index.html",
+    "searchKeys": [
+      "ServerException",
+      "open class ServerException : RuntimeException",
+      "io.jano.mobile.libs.android.infrastructure.ServerException"
+    ]
+  },
+  {
+    "name": "open override val headers: Map<String, List<String>>",
+    "description": "io.jano.mobile.libs.android.infrastructure.ClientError.headers",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-client-error/headers.html",
+    "searchKeys": [
+      "headers",
+      "open override val headers: Map<String, List<String>>",
+      "io.jano.mobile.libs.android.infrastructure.ClientError.headers"
+    ]
+  },
+  {
+    "name": "open override val headers: Map<String, List<String>>",
+    "description": "io.jano.mobile.libs.android.infrastructure.Informational.headers",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-informational/headers.html",
+    "searchKeys": [
+      "headers",
+      "open override val headers: Map<String, List<String>>",
+      "io.jano.mobile.libs.android.infrastructure.Informational.headers"
+    ]
+  },
+  {
+    "name": "open override val headers: Map<String, List<String>>",
+    "description": "io.jano.mobile.libs.android.infrastructure.Redirection.headers",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-redirection/headers.html",
+    "searchKeys": [
+      "headers",
+      "open override val headers: Map<String, List<String>>",
+      "io.jano.mobile.libs.android.infrastructure.Redirection.headers"
+    ]
+  },
+  {
+    "name": "open override val headers: Map<String, List<String>>",
+    "description": "io.jano.mobile.libs.android.infrastructure.ServerError.headers",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-server-error/headers.html",
+    "searchKeys": [
+      "headers",
+      "open override val headers: Map<String, List<String>>",
+      "io.jano.mobile.libs.android.infrastructure.ServerError.headers"
+    ]
+  },
+  {
+    "name": "open override val headers: Map<String, List<String>>",
+    "description": "io.jano.mobile.libs.android.infrastructure.Success.headers",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-success/headers.html",
+    "searchKeys": [
+      "headers",
+      "open override val headers: Map<String, List<String>>",
+      "io.jano.mobile.libs.android.infrastructure.Success.headers"
+    ]
+  },
+  {
+    "name": "open override val statusCode: Int",
+    "description": "io.jano.mobile.libs.android.infrastructure.ClientError.statusCode",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-client-error/status-code.html",
+    "searchKeys": [
+      "statusCode",
+      "open override val statusCode: Int",
+      "io.jano.mobile.libs.android.infrastructure.ClientError.statusCode"
+    ]
+  },
+  {
+    "name": "open override val statusCode: Int",
+    "description": "io.jano.mobile.libs.android.infrastructure.Informational.statusCode",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-informational/status-code.html",
+    "searchKeys": [
+      "statusCode",
+      "open override val statusCode: Int",
+      "io.jano.mobile.libs.android.infrastructure.Informational.statusCode"
+    ]
+  },
+  {
+    "name": "open override val statusCode: Int",
+    "description": "io.jano.mobile.libs.android.infrastructure.Redirection.statusCode",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-redirection/status-code.html",
+    "searchKeys": [
+      "statusCode",
+      "open override val statusCode: Int",
+      "io.jano.mobile.libs.android.infrastructure.Redirection.statusCode"
+    ]
+  },
+  {
+    "name": "open override val statusCode: Int",
+    "description": "io.jano.mobile.libs.android.infrastructure.ServerError.statusCode",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-server-error/status-code.html",
+    "searchKeys": [
+      "statusCode",
+      "open override val statusCode: Int",
+      "io.jano.mobile.libs.android.infrastructure.ServerError.statusCode"
+    ]
+  },
+  {
+    "name": "open override val statusCode: Int",
+    "description": "io.jano.mobile.libs.android.infrastructure.Success.statusCode",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-success/status-code.html",
+    "searchKeys": [
+      "statusCode",
+      "open override val statusCode: Int",
+      "io.jano.mobile.libs.android.infrastructure.Success.statusCode"
+    ]
+  },
+  {
+    "name": "val Response.isClientError: Boolean",
+    "description": "io.jano.mobile.libs.android.infrastructure.isClientError",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/is-client-error.html",
+    "searchKeys": [
+      "isClientError",
+      "val Response.isClientError: Boolean",
+      "io.jano.mobile.libs.android.infrastructure.isClientError"
+    ]
+  },
+  {
+    "name": "val Response.isInformational: Boolean",
+    "description": "io.jano.mobile.libs.android.infrastructure.isInformational",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/is-informational.html",
+    "searchKeys": [
+      "isInformational",
+      "val Response.isInformational: Boolean",
+      "io.jano.mobile.libs.android.infrastructure.isInformational"
+    ]
+  },
+  {
+    "name": "val Response.isServerError: Boolean",
+    "description": "io.jano.mobile.libs.android.infrastructure.isServerError",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/is-server-error.html",
+    "searchKeys": [
+      "isServerError",
+      "val Response.isServerError: Boolean",
+      "io.jano.mobile.libs.android.infrastructure.isServerError"
+    ]
+  },
+  {
+    "name": "val ZeroSecurityOptions: SecurityOptions",
+    "description": "io.jano.mobile.libs.android.JanoSDK.ZeroSecurityOptions",
+    "location": "lib-jano/io.jano.mobile.libs.android/-jano-s-d-k/-zero-security-options.html",
+    "searchKeys": [
+      "ZeroSecurityOptions",
+      "val ZeroSecurityOptions: SecurityOptions",
+      "io.jano.mobile.libs.android.JanoSDK.ZeroSecurityOptions"
+    ]
+  },
+  {
+    "name": "val baseUrl: String",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiClient.baseUrl",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-client/base-url.html",
+    "searchKeys": [
+      "baseUrl",
+      "val baseUrl: String",
+      "io.jano.mobile.libs.android.infrastructure.ApiClient.baseUrl"
+    ]
+  },
+  {
+    "name": "val body: Any? = null",
+    "description": "io.jano.mobile.libs.android.infrastructure.ClientError.body",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-client-error/body.html",
+    "searchKeys": [
+      "body",
+      "val body: Any? = null",
+      "io.jano.mobile.libs.android.infrastructure.ClientError.body"
+    ]
+  },
+  {
+    "name": "val body: Any? = null",
+    "description": "io.jano.mobile.libs.android.infrastructure.ServerError.body",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-server-error/body.html",
+    "searchKeys": [
+      "body",
+      "val body: Any? = null",
+      "io.jano.mobile.libs.android.infrastructure.ServerError.body"
+    ]
+  },
+  {
+    "name": "val certificates: List<String>",
+    "description": "io.jano.mobile.libs.android.models.Certificates.certificates",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificates/certificates.html",
+    "searchKeys": [
+      "certificates",
+      "val certificates: List<String>",
+      "io.jano.mobile.libs.android.models.Certificates.certificates"
+    ]
+  },
+  {
+    "name": "val chain: String",
+    "description": "io.jano.mobile.libs.android.models.CertificateSigningResponse.chain",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificate-signing-response/chain.html",
+    "searchKeys": [
+      "chain",
+      "val chain: String",
+      "io.jano.mobile.libs.android.models.CertificateSigningResponse.chain"
+    ]
+  },
+  {
+    "name": "val cipher: String",
+    "description": "io.jano.mobile.libs.android.models.CertificateSigningRequest.cipher",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificate-signing-request/cipher.html",
+    "searchKeys": [
+      "cipher",
+      "val cipher: String",
+      "io.jano.mobile.libs.android.models.CertificateSigningRequest.cipher"
+    ]
+  },
+  {
+    "name": "val client: OkHttpClient",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiClient.Companion.client",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-client/-companion/client.html",
+    "searchKeys": [
+      "client",
+      "val client: OkHttpClient",
+      "io.jano.mobile.libs.android.infrastructure.ApiClient.Companion.client"
+    ]
+  },
+  {
+    "name": "val data: T",
+    "description": "io.jano.mobile.libs.android.infrastructure.Success.data",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-success/data.html",
+    "searchKeys": [
+      "data",
+      "val data: T",
+      "io.jano.mobile.libs.android.infrastructure.Success.data"
+    ]
+  },
+  {
+    "name": "val default: Boolean = false",
+    "description": "io.jano.mobile.libs.android.models.CertificateSigningRequest.default",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificate-signing-request/default.html",
+    "searchKeys": [
+      "default",
+      "val default: Boolean = false",
+      "io.jano.mobile.libs.android.models.CertificateSigningRequest.default"
+    ]
+  },
+  {
+    "name": "val defaultMultiValueConverter: (item: Any?) -> String",
+    "description": "io.jano.mobile.libs.android.infrastructure.defaultMultiValueConverter",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/default-multi-value-converter.html",
+    "searchKeys": [
+      "defaultMultiValueConverter",
+      "val defaultMultiValueConverter: (item: Any?) -> String",
+      "io.jano.mobile.libs.android.infrastructure.defaultMultiValueConverter"
+    ]
+  },
+  {
+    "name": "val device: Device? = null",
+    "description": "io.jano.mobile.libs.android.models.CertificateSigningRequest.device",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificate-signing-request/device.html",
+    "searchKeys": [
+      "device",
+      "val device: Device? = null",
+      "io.jano.mobile.libs.android.models.CertificateSigningRequest.device"
+    ]
+  },
+  {
+    "name": "val headers: Map<String, String>",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestConfig.headers",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-config/headers.html",
+    "searchKeys": [
+      "headers",
+      "val headers: Map<String, String>",
+      "io.jano.mobile.libs.android.infrastructure.RequestConfig.headers"
+    ]
+  },
+  {
+    "name": "val invalidatedByBiometricEnrollment: Boolean = false",
+    "description": "io.jano.mobile.libs.android.security.SecurityOptions.invalidatedByBiometricEnrollment",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-options/invalidated-by-biometric-enrollment.html",
+    "searchKeys": [
+      "invalidatedByBiometricEnrollment",
+      "val invalidatedByBiometricEnrollment: Boolean = false",
+      "io.jano.mobile.libs.android.security.SecurityOptions.invalidatedByBiometricEnrollment"
+    ]
+  },
+  {
+    "name": "val jsonHeaders: Map<String, String>",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiClient.Companion.jsonHeaders",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-client/-companion/json-headers.html",
+    "searchKeys": [
+      "jsonHeaders",
+      "val jsonHeaders: Map<String, String>",
+      "io.jano.mobile.libs.android.infrastructure.ApiClient.Companion.jsonHeaders"
+    ]
+  },
+  {
+    "name": "val keyId: String",
+    "description": "io.jano.mobile.libs.android.models.CertificateSigningRequest.keyId",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificate-signing-request/key-id.html",
+    "searchKeys": [
+      "keyId",
+      "val keyId: String",
+      "io.jano.mobile.libs.android.models.CertificateSigningRequest.keyId"
+    ]
+  },
+  {
+    "name": "val message: String? = null",
+    "description": "io.jano.mobile.libs.android.infrastructure.ServerError.message",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-server-error/message.html",
+    "searchKeys": [
+      "message",
+      "val message: String? = null",
+      "io.jano.mobile.libs.android.infrastructure.ServerError.message"
+    ]
+  },
+  {
+    "name": "val method: RequestMethod",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestConfig.method",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-config/method.html",
+    "searchKeys": [
+      "method",
+      "val method: RequestMethod",
+      "io.jano.mobile.libs.android.infrastructure.RequestConfig.method"
+    ]
+  },
+  {
+    "name": "val moshi: Moshi",
+    "description": "io.jano.mobile.libs.android.infrastructure.Serializer.moshi",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-serializer/moshi.html",
+    "searchKeys": [
+      "moshi",
+      "val moshi: Moshi",
+      "io.jano.mobile.libs.android.infrastructure.Serializer.moshi"
+    ]
+  },
+  {
+    "name": "val path: String",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestConfig.path",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-config/path.html",
+    "searchKeys": [
+      "path",
+      "val path: String",
+      "io.jano.mobile.libs.android.infrastructure.RequestConfig.path"
+    ]
+  },
+  {
+    "name": "val platform: String",
+    "description": "io.jano.mobile.libs.android.models.Device.platform",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-device/platform.html",
+    "searchKeys": [
+      "platform",
+      "val platform: String",
+      "io.jano.mobile.libs.android.models.Device.platform"
+    ]
+  },
+  {
+    "name": "val query: Map<String, List<String>>",
+    "description": "io.jano.mobile.libs.android.infrastructure.RequestConfig.query",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-request-config/query.html",
+    "searchKeys": [
+      "query",
+      "val query: Map<String, List<String>>",
+      "io.jano.mobile.libs.android.infrastructure.RequestConfig.query"
+    ]
+  },
+  {
+    "name": "val request: String",
+    "description": "io.jano.mobile.libs.android.models.CertificateSigningRequest.request",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-certificate-signing-request/request.html",
+    "searchKeys": [
+      "request",
+      "val request: String",
+      "io.jano.mobile.libs.android.models.CertificateSigningRequest.request"
+    ]
+  },
+  {
+    "name": "val responseType: ResponseType",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiInfrastructureResponse.responseType",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-infrastructure-response/response-type.html",
+    "searchKeys": [
+      "responseType",
+      "val responseType: ResponseType",
+      "io.jano.mobile.libs.android.infrastructure.ApiInfrastructureResponse.responseType"
+    ]
+  },
+  {
+    "name": "val statusText: String",
+    "description": "io.jano.mobile.libs.android.infrastructure.Informational.statusText",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-informational/status-text.html",
+    "searchKeys": [
+      "statusText",
+      "val statusText: String",
+      "io.jano.mobile.libs.android.infrastructure.Informational.statusText"
+    ]
+  },
+  {
+    "name": "val strongBoxBacked: Boolean = false",
+    "description": "io.jano.mobile.libs.android.security.SecurityOptions.strongBoxBacked",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-options/strong-box-backed.html",
+    "searchKeys": [
+      "strongBoxBacked",
+      "val strongBoxBacked: Boolean = false",
+      "io.jano.mobile.libs.android.security.SecurityOptions.strongBoxBacked"
+    ]
+  },
+  {
+    "name": "val unlockedDeviceRequired: Boolean = false",
+    "description": "io.jano.mobile.libs.android.security.SecurityOptions.unlockedDeviceRequired",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-options/unlocked-device-required.html",
+    "searchKeys": [
+      "unlockedDeviceRequired",
+      "val unlockedDeviceRequired: Boolean = false",
+      "io.jano.mobile.libs.android.security.SecurityOptions.unlockedDeviceRequired"
+    ]
+  },
+  {
+    "name": "val userAgent: String",
+    "description": "io.jano.mobile.libs.android.models.Device.userAgent",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-device/user-agent.html",
+    "searchKeys": [
+      "userAgent",
+      "val userAgent: String",
+      "io.jano.mobile.libs.android.models.Device.userAgent"
+    ]
+  },
+  {
+    "name": "val userAuthenticationRequired: Boolean = true",
+    "description": "io.jano.mobile.libs.android.security.SecurityOptions.userAuthenticationRequired",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-options/user-authentication-required.html",
+    "searchKeys": [
+      "userAuthenticationRequired",
+      "val userAuthenticationRequired: Boolean = true",
+      "io.jano.mobile.libs.android.security.SecurityOptions.userAuthenticationRequired"
+    ]
+  },
+  {
+    "name": "val userPresenceRequired: Boolean = false",
+    "description": "io.jano.mobile.libs.android.security.SecurityOptions.userPresenceRequired",
+    "location": "lib-jano/io.jano.mobile.libs.android.security/-security-options/user-presence-required.html",
+    "searchKeys": [
+      "userPresenceRequired",
+      "val userPresenceRequired: Boolean = false",
+      "io.jano.mobile.libs.android.security.SecurityOptions.userPresenceRequired"
+    ]
+  },
+  {
+    "name": "val value: String",
+    "description": "io.jano.mobile.libs.android.models.Destination.value",
+    "location": "lib-jano/io.jano.mobile.libs.android.models/-destination/value.html",
+    "searchKeys": [
+      "value",
+      "val value: String",
+      "io.jano.mobile.libs.android.models.Destination.value"
+    ]
+  },
+  {
+    "name": "var defaultHeaders: Map<String, String>",
+    "description": "io.jano.mobile.libs.android.infrastructure.ApiClient.Companion.defaultHeaders",
+    "location": "lib-jano/io.jano.mobile.libs.android.infrastructure/-api-client/-companion/default-headers.html",
+    "searchKeys": [
+      "defaultHeaders",
+      "var defaultHeaders: Map<String, String>",
+      "io.jano.mobile.libs.android.infrastructure.ApiClient.Companion.defaultHeaders"
+    ]
+  }
+]

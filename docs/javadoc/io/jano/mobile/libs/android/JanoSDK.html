@@ -189,6 +189,12 @@ public class <span class="typeNameLabel"><a href=JanoSDK.html>JanoSDK</a></span>
                                         </tr>
                                         
                                         <tr class="altColor">
+                                            <td class="colFirst"><code>private  <a href=https://developer.android.com/reference/kotlin/java/security/cert/X509Certificate.html>X509Certificate</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=JanoSDK.html#serviceCertificate>serviceCertificate</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
                                             <td class="colFirst"><code>public final static <a href=JanoSDK.html>JanoSDK</a></code></td>
                                             <th class="colSecond" scope="row"><code><a href=JanoSDK.html#INSTANCE>INSTANCE</a></code></th>
                                             <td class="colLast"></td>
@@ -308,19 +314,19 @@ public class <span class="typeNameLabel"><a href=JanoSDK.html>JanoSDK</a></span>
                                         </tr>
                                         
                                         <tr id="i5" class="rowColor">
-                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html>Result</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt;</code>
+                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html>Result</a>&lt;<a href=models/SecuredPayload.html>SecuredPayload</a>&gt;</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=JanoSDK.html#encrypt(String,String,String,String,Boolean)>encrypt</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> userId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> deviceId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> alias, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> forRemoteDecryption) </code>
+                                            <th class="colSecond" scope="row"><code><a href=JanoSDK.html#encrypt(Context,String,String,String,String,Boolean)>encrypt</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> userId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> deviceId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> alias, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> forRemoteDecryption) </code>
                                             </th>
                                             <td class="colLast">Encrypts a message, either for local or remote decryption, for the given tuple: userId, deviceId and alias</td>
                                         </tr>
                                         
                                         <tr id="i6" class="altColor">
-                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html>Result</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt;</code>
+                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html>Result</a>&lt;<a href=models/Payload.html>Payload</a>&gt;</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=JanoSDK.html#decrypt(String,String,String,String)>decrypt</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> userId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> deviceId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> alias, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> cipheredText) </code>
+                                            <th class="colSecond" scope="row"><code><a href=JanoSDK.html#decrypt(String,String,String,String,String,Boolean)>decrypt</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> userId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> deviceId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> alias, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> securedPayload, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> signature, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isRemotePayload) </code>
                                             </th>
-                                            <td class="colLast">Decrypts a message, using the public key, for the given tuple: userId, deviceId and alias</td>
+                                            <td class="colLast">Decrypts an verifies a ciphered message using the public key for the given tuple: userId, deviceId and alias.</td>
                                         </tr>
                                         
                                         <tr id="i7" class="rowColor">
@@ -353,6 +359,22 @@ public class <span class="typeNameLabel"><a href=JanoSDK.html>JanoSDK</a></span>
                                             <th class="colSecond" scope="row"><code><a href=JanoSDK.html#getZeroSecurityOptions()>getZeroSecurityOptions</a>() </code>
                                             </th>
                                             <td class="colLast">This security option disables all the minimum security options.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/security/cert/X509Certificate.html>X509Certificate</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=JanoSDK.html#getServiceCertificate()>getServiceCertificate</a>() </code>
+                                            </th>
+                                            <td class="colLast">Service certificate used when signing certificates.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=JanoSDK.html#setServiceCertificate(X509Certificate)>setServiceCertificate</a>(<a href=https://developer.android.com/reference/kotlin/java/security/cert/X509Certificate.html>X509Certificate</a> serviceCertificate) </code>
+                                            </th>
+                                            <td class="colLast">Service certificate used when signing certificates.</td>
                                         </tr>
                                         
                                         </tbody>
@@ -586,6 +608,8 @@ public class <span class="typeNameLabel"><a href=JanoSDK.html>JanoSDK</a></span>
                                             
                                             
                                             
+                                            <dd><code>certificatesChain</code> - the certificate chain that Jano's Users microservice returned when signing the certificate</dd>
+                                            
                                             
                                         </dl>
                                         
@@ -593,7 +617,7 @@ public class <span class="typeNameLabel"><a href=JanoSDK.html>JanoSDK</a></span>
                                     </li>
                                 </ul>
                                 
-                                <a id="encrypt(String,String,String,String,Boolean)">
+                                <a id="encrypt(Context,String,String,String,String,Boolean)">
                                     <!--   -->
                                 </a>
                                 <ul class=
@@ -601,11 +625,13 @@ public class <span class="typeNameLabel"><a href=JanoSDK.html>JanoSDK</a></span>
                                           >
                                     <li class="blockList">
                                         <h4>encrypt</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html>Result</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; <a href=JanoSDK.html#encrypt(String,String,String,String,Boolean)>encrypt</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> userId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> deviceId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> alias, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> forRemoteDecryption)</pre>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html>Result</a>&lt;<a href=models/SecuredPayload.html>SecuredPayload</a>&gt; <a href=JanoSDK.html#encrypt(Context,String,String,String,String,Boolean)>encrypt</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> userId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> deviceId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> alias, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> forRemoteDecryption)</pre>
                                         <div class="block"><p>Encrypts a message, either for local or remote decryption, for the given tuple: userId, deviceId and alias</p></div>
                                         
                                         <dl>
                                             <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
                                             
                                             
                                             <dd><code>userId</code> - identifier of the user who owns the certificates</dd>
@@ -633,7 +659,7 @@ public class <span class="typeNameLabel"><a href=JanoSDK.html>JanoSDK</a></span>
                                     </li>
                                 </ul>
                                 
-                                <a id="decrypt(String,String,String,String)">
+                                <a id="decrypt(String,String,String,String,String,Boolean)">
                                     <!--   -->
                                 </a>
                                 <ul class=
@@ -641,8 +667,8 @@ public class <span class="typeNameLabel"><a href=JanoSDK.html>JanoSDK</a></span>
                                           >
                                     <li class="blockList">
                                         <h4>decrypt</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html>Result</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; <a href=JanoSDK.html#decrypt(String,String,String,String)>decrypt</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> userId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> deviceId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> alias, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> cipheredText)</pre>
-                                        <div class="block"><p>Decrypts a message, using the public key, for the given tuple: userId, deviceId and alias</p></div>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html>Result</a>&lt;<a href=models/Payload.html>Payload</a>&gt; <a href=JanoSDK.html#decrypt(String,String,String,String,String,Boolean)>decrypt</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> userId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> deviceId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> alias, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> securedPayload, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> signature, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isRemotePayload)</pre>
+                                        <div class="block"><p>Decrypts an verifies a ciphered message using the public key for the given tuple: userId, deviceId and alias.</p></div>
                                         
                                         <dl>
                                             <dt><span class="paramLabel">Parameters:</span></dt>
@@ -660,7 +686,15 @@ public class <span class="typeNameLabel"><a href=JanoSDK.html>JanoSDK</a></span>
                                             
                                             
                                             
-                                            <dd><code>cipheredText</code> - the encrypted message encoded in Base64</dd>
+                                            <dd><code>securedPayload</code> - the secured (encrypted) payload encoded in Base64</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>signature</code> - the signature of the securedPayload in Base64</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>isRemotePayload</code> - true if the secured payload for generated server side.</dd>
                                             
                                             
                                         </dl>
@@ -718,12 +752,42 @@ public class <span class="typeNameLabel"><a href=JanoSDK.html>JanoSDK</a></span>
                                     <!--   -->
                                 </a>
                                 <ul class=
-                                              "blockListLast"
+                                              "blockList"
                                           >
                                     <li class="blockList">
                                         <h4>getZeroSecurityOptions</h4>
                                         <pre class="methodSignature"> final <a href=SecurityOptions.html>SecurityOptions</a> <a href=JanoSDK.html#getZeroSecurityOptions()>getZeroSecurityOptions</a>()</pre>
                                         <div class="block"><p>This security option disables all the minimum security options. Use only on Emulators and Tests.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getServiceCertificate()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getServiceCertificate</h4>
+                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/security/cert/X509Certificate.html>X509Certificate</a> <a href=JanoSDK.html#getServiceCertificate()>getServiceCertificate</a>()</pre>
+                                        <div class="block"><p>Service certificate used when signing certificates.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setServiceCertificate(X509Certificate)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setServiceCertificate</h4>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=JanoSDK.html#setServiceCertificate(X509Certificate)>setServiceCertificate</a>(<a href=https://developer.android.com/reference/kotlin/java/security/cert/X509Certificate.html>X509Certificate</a> serviceCertificate)</pre>
+                                        <div class="block"><p>Service certificate used when signing certificates.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

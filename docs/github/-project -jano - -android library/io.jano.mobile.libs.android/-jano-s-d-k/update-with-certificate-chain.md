@@ -16,4 +16,4 @@ androidJvm
 | userId | identifier of the user who owns the certificates |
 | deviceId | identifier of this device. Default value is JanoSDK.DefaultDeviceId |
 | alias | identifier of the certificates. Default value is JanoSDK.DefaultAlias |
-| certificateChain | the certificate chain that Jano's Users microservice returned when signing the certificate |
+| certificatesChain | the certificate chain that Jano's Users microservice returned when signing the certificate |
