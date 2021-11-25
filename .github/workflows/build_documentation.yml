@@ -35,7 +35,7 @@ jobs:
 
       - name: Commit documentation files
         run: |
-          echo "Document updated: $(date '+%d %b %Y %H:%M:%S')" > UPDATED.md
+          echo "Document updated: $(date '+%d %b %Y %H:%M:%S')" > ./docs/UPDATED.md
           git config --local user.email "project.jano+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
