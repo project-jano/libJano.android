@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "730379152048",
+    "project_id": "project-jano",
+    "storage_bucket": "project-jano.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730379152048:android:4f4a4ca0edac0dd1b66975",
+        "android_client_info": {
+          "package_name": "io.jano.mobile.tests.libs.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730379152048-od9nctn3oaruuc9bsupa8vdoqur69n9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoJhNi6kmb7M-r3XzSuo1YkmgPYQe3YTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730379152048-od9nctn3oaruuc9bsupa8vdoqur69n9p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

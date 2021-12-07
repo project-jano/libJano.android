@@ -11,7 +11,7 @@ android {
         minSdk 26
         targetSdk 31
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
 
 
@@ -19,11 +19,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField("String", "JANO_SERVICE_URL", '"http://10.0.1.143:8080/v1"')
+            buildConfigField("String", "JANO_SERVICE_URL", '"http://10.0.1.143:8080/v2"')
         }
 
         debug {
-            buildConfigField("String", "JANO_SERVICE_URL", '"http://10.0.1.143:8080/v1"')
+            buildConfigField("String", "JANO_SERVICE_URL", '"http://10.0.1.143:8080/v2"')
         }
     }
     compileOptions {
@@ -57,5 +57,11 @@ dependencies {
     implementation "com.squareup.moshi:moshi-adapters:1.11.0"
     implementation "com.squareup.okhttp3:okhttp:4.9.2"
 
+    implementation platform("com.google.firebase:firebase-bom:29.0.1")
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
     implementation project(path: ':libJano')
 }
+
+apply plugin: "com.google.gms.google-services"
