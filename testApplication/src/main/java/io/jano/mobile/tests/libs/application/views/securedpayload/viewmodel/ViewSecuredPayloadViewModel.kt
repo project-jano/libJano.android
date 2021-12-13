@@ -21,7 +21,8 @@ class ViewSecuredPayloadViewModel(application: Application) : AndroidViewModel(a
     private var _payload = MutableLiveData<Payload?>(null)
     val payload: LiveData<Payload?> = _payload
 
-    private val userId = "kimi"
+    private val userId = "test-user"
+    private val deviceId = "test-emulator"
 
     fun resetErrors() {
         _currentError.value = null
@@ -34,6 +35,7 @@ class ViewSecuredPayloadViewModel(application: Application) : AndroidViewModel(a
 
         JanoSDK.decrypt(
             userId = userId,
+            deviceId = deviceId,
             securedPayload = securedPayload,
             signature = signature,
         )

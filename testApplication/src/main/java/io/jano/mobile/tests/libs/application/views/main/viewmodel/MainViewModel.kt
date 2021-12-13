@@ -24,8 +24,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private var _currentCertificate = MutableLiveData<List<X509Certificate>>(listOf())
     val currentCertificate: LiveData<List<X509Certificate>> = _currentCertificate
 
-    private val subject = "Kimi"
-    private val userId = "kimi"
+    private val subject = "Test User"
+    private val userId = "test-user"
+    private val deviceId = "test-emulator"
+
     private val options = JanoSDK.ZeroSecurityOptions
 
     init {
@@ -37,6 +39,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             if (JanoSDK.hasCertificate(
                     userId = userId,
+                    deviceId = deviceId,
                 )
             ) {
                 loadStoredCertificates()
@@ -46,6 +49,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             JanoSDK.generateCertificate(
                 context = getApplication(),
                 userId = userId,
+                deviceId = deviceId,
                 subject = subject,
                 options = options
             )
@@ -73,17 +77,20 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val context = getApplication<Application>().applicationContext
             val csr = JanoSDK.createCertificateSigningRequest(
                 context = context,
-                userId = userId
+                userId = userId,
+                deviceId = deviceId,
             )
 
             UserAPI(BuildConfig.JANO_SERVICE_URL)
                 .signCertificate(
                     userId = userId,
+                    deviceId = deviceId,
                     certificateSigningRequest = csr,
                 )
                 .onSuccess {
                     JanoSDK.updateWithCertificateChain(
                         userId = userId,
+                        deviceId = deviceId,
                         certificatesChain = it
                     )
                         .onSuccess {
@@ -116,6 +123,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             JanoSDK.encrypt(
                 context = context,
                 userId = userId,
+                deviceId = deviceId,
                 message = "{\"StringKey\":\"a value\",\"IntKey\":1}",
                 forRemoteDecryption = false
             )
@@ -131,6 +139,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
                     JanoSDK.decrypt(
                         userId = userId,
+                        deviceId = deviceId,
                         securedPayload = securedPayload.payload,
                         signature = securedPayload.signature,
                         isRemotePayload = false
@@ -168,6 +177,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private fun loadStoredCertificates() {
         if (!JanoSDK.hasCertificate(
                 userId = userId,
+                deviceId = deviceId,
             )
         ) {
             return
@@ -179,6 +189,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         JanoSDK.getCertificates(
             userId = userId,
+            deviceId = deviceId,
         )
             .onSuccess {
                 viewModelScope.launch(Dispatchers.Main) {

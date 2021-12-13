@@ -11,12 +11,11 @@
  */
 package io.jano.mobile.tests.libs.application.api
 
-import io.jano.mobile.libs.android.JanoSDK
 import io.jano.mobile.libs.android.models.CertificateSigningRequest
 import io.jano.mobile.tests.libs.application.api.openapi.*
 import java.net.URLEncoder
 
-class SecurityAPI(basePath: String = "http://localhost/v1") : ApiClient(basePath) {
+class SecurityAPI(basePath: String = "http://localhost/v2") : ApiClient(basePath) {
 
     private data class CertificateSigningResponse(val chain: String)
 
@@ -30,7 +29,7 @@ class SecurityAPI(basePath: String = "http://localhost/v1") : ApiClient(basePath
     @Suppress("UNCHECKED_CAST")
     fun signCertificate(
         userId: String,
-        deviceId: String = JanoSDK.DefaultDeviceId,
+        deviceId: String,
         certificateSigningRequest: CertificateSigningRequest,
     ): Result<String> {
 

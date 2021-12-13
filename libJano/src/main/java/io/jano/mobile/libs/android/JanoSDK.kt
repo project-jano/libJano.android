@@ -1,12 +1,10 @@
 package io.jano.mobile.libs.android
 
 import android.content.Context
+import android.content.Intent
 import android.util.Base64
 import io.jano.mobile.libs.android.exceptions.CertificateAlreadyExistsException
-import io.jano.mobile.libs.android.models.CertificateSigningRequest
-import io.jano.mobile.libs.android.models.Device
-import io.jano.mobile.libs.android.models.Payload
-import io.jano.mobile.libs.android.models.SecuredPayload
+import io.jano.mobile.libs.android.models.*
 import io.jano.mobile.libs.android.security.Constants
 import io.jano.mobile.libs.android.security.SecurityManager
 import java.io.ByteArrayInputStream
@@ -27,8 +25,7 @@ object JanoSDK {
 
     private const val CertificateFactoryDefaultType = "X.509"
 
-    const val DefaultDeviceId = "default_device"
-    const val DefaultAlias = "default_alias"
+    const val DefaultAlias = "default"
 
     /**
      * This is the default security option for key-pair
@@ -69,7 +66,7 @@ object JanoSDK {
      */
     fun hasCertificate(
         userId: String,
-        deviceId: String = DefaultDeviceId,
+        deviceId: String,
         alias: String = DefaultAlias,
     ): Boolean {
         return SecurityManager.hasCertificates(
@@ -88,7 +85,7 @@ object JanoSDK {
      */
     fun getCertificates(
         userId: String,
-        deviceId: String = DefaultDeviceId,
+        deviceId: String,
         alias: String = DefaultAlias,
     ): Result<List<X509Certificate>> {
         return try {
@@ -120,7 +117,7 @@ object JanoSDK {
     fun generateCertificate(
         context: Context,
         userId: String,
-        deviceId: String = DefaultDeviceId,
+        deviceId: String,
         alias: String = DefaultAlias,
         subject: String,
         notBefore: Date = Date(),
@@ -180,7 +177,7 @@ object JanoSDK {
     fun createCertificateSigningRequest(
         context: Context,
         userId: String,
-        deviceId: String = DefaultDeviceId,
+        deviceId: String,
         alias: String = DefaultAlias,
         defaultCertificate: Boolean = true,
     ): CertificateSigningRequest {
@@ -208,7 +205,7 @@ object JanoSDK {
      */
     fun updateWithCertificateChain(
         userId: String,
-        deviceId: String = DefaultDeviceId,
+        deviceId: String,
         alias: String = DefaultAlias,
         certificatesChain: String,
     ): Result<List<X509Certificate>> {
@@ -270,7 +267,7 @@ object JanoSDK {
     fun encrypt(
         context: Context,
         userId: String,
-        deviceId: String = DefaultDeviceId,
+        deviceId: String,
         alias: String = DefaultAlias,
         message: String,
         forRemoteDecryption: Boolean = true
@@ -303,7 +300,7 @@ object JanoSDK {
      */
     fun decrypt(
         userId: String,
-        deviceId: String = DefaultDeviceId,
+        deviceId: String,
         alias: String = DefaultAlias,
         securedPayload: String,
         signature: String,
@@ -322,6 +319,68 @@ object JanoSDK {
             )
         } catch (e: Exception) {
             Result.failure(e)
+        }
+    }
+
+    fun decryptNotification(
+        userId: String,
+        deviceId: String,
+        alias: String = DefaultAlias,
+        intent: Intent): Intent? {
+
+        try {
+            val securedPayload = intent.extras?.keySet()
+                ?.filter { it.startsWith("jano.p.") }
+                ?.sorted()
+                ?.map { intent.extras!!.getString(it) }
+                ?.joinToString()
+
+            val signature = intent.extras?.keySet()
+                ?.filter { it.startsWith("jano.s.") }
+                ?.sorted()
+                ?.map { intent.extras!!.getString(it) }
+                ?.joinToString()
+
+            if (securedPayload.isNullOrEmpty() || signature.isNullOrEmpty()) {
+                return null
+            }
+
+            val payload = SecurityManager.decrypt(
+                userId = userId,
+                deviceId = deviceId,
+                alias = alias,
+                securedPayload = securedPayload,
+                signature = signature,
+                useServerCertificate = true,
+            )
+
+            val spn = SecurePushNotification.from(payload.message)
+
+            if (spn.title.isNullOrEmpty() && spn.body.isNullOrEmpty() && spn.payload.isNullOrEmpty()) {
+                return null
+            }
+
+            intent.extras?.keySet()
+                ?.filter { ( it.startsWith("jano.s.") || it.startsWith("jano.p.") ) }
+                ?.forEach {
+                    intent.removeExtra(it)
+                }
+
+            spn.title?.let {
+                intent.putExtra("gcm.notification.title", it)
+            }
+            spn.body?.let {
+                intent.putExtra("gcm.notification.body", it)
+            }
+
+            spn.payload?.keys?.let {
+                it.forEach { key ->
+                    intent.putExtra(key, spn.payload[key])
+                }
+            }
+            return intent
+        } catch (e: Exception) {
+            return null
         }
     }
 }
