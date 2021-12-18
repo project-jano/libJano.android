@@ -1,17 +1,21 @@
 package io.jano.mobile.libs.android.security
 
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import android.util.Base64
 import io.jano.mobile.libs.android.SecurityOptions
-import io.jano.mobile.libs.android.exceptions.InvalidKeyStoreEntry
+import io.jano.mobile.libs.android.exceptions.*
+import io.jano.mobile.libs.android.exceptions.InvalidKeyStoreEntryException
+import io.jano.mobile.libs.android.exceptions.InvalidPayloadException
 import io.jano.mobile.libs.android.exceptions.InvalidSignatureException
-import io.jano.mobile.libs.android.exceptions.KeyStoreEntryNotFound
+import io.jano.mobile.libs.android.exceptions.KeyStoreEntryNotFoundException
 import io.jano.mobile.libs.android.exceptions.MissingRootCertificateException
 import io.jano.mobile.libs.android.models.Device
 import io.jano.mobile.libs.android.models.Payload
+import io.jano.mobile.libs.android.models.SecurePushNotification
 import io.jano.mobile.libs.android.models.SecuredPayload
 import org.spongycastle.jce.provider.BouncyCastleProvider
 import org.spongycastle.operator.jcajce.JcaContentSignerBuilder
@@ -264,6 +268,67 @@ internal class SecurityManager {
             return Payload.from(String(plainTextBytes))
         }
 
+        fun decryptPushNotification(
+            userId: String,
+            deviceId: String,
+            alias: String,
+            intent: Intent,
+        ): Intent {
+            val securedPayload = intent.extras?.keySet()
+                ?.filter { it.startsWith("jano.p.") }
+                ?.sorted()
+                ?.map { intent.extras!!.getString(it) }
+                ?.joinToString()
+
+            val signature = intent.extras?.keySet()
+                ?.filter { it.startsWith("jano.s.") }
+                ?.sorted()
+                ?.map { intent.extras!!.getString(it) }
+                ?.joinToString()
+
+            if (securedPayload.isNullOrEmpty() || signature.isNullOrEmpty()) {
+                throw InvalidPayloadException()
+            }
+
+            val payload = SecurityManager.decrypt(
+                userId = userId,
+                deviceId = deviceId,
+                alias = alias,
+                securedPayload = securedPayload,
+                signature = signature,
+                useServerCertificate = true,
+            )
+
+            val spn = SecurePushNotification.from(payload.message)
+
+            if (spn.title.isNullOrEmpty() && spn.body.isNullOrEmpty() && spn.payload.isNullOrEmpty()) {
+                throw InvalidSecurePushNotificationException("Missing at least one required field.")
+            }
+
+            intent.extras?.keySet()
+                ?.filter { (it.startsWith("jano.s.") || it.startsWith("jano.p.")) }
+                ?.forEach {
+                    intent.removeExtra(it)
+                }
+
+            spn.title?.let {
+                intent.putExtra("gcm.notification.title", it)
+            }
+            spn.body?.let {
+                intent.putExtra("gcm.notification.body", it)
+            }
+
+            spn.payload?.keys?.let {
+                it.forEach { key ->
+                    spn.payload[key]?.let { value ->
+                        intent.putExtra(key, value)
+                    }
+                }
+            }
+
+            return intent
+        }
+
         private fun getCertificateFromPrivateKey(
             useServerCertificate: Boolean,
             privateKeyEntry: KeyStore.PrivateKeyEntry
@@ -295,7 +360,7 @@ internal class SecurityManager {
             return "$userId::$deviceId::$alias"
         }
 
-        @Throws(KeyStoreEntryNotFound::class, InvalidKeyStoreEntry::class, KeyStoreException::class)
+        @Throws(KeyStoreEntryNotFoundException::class, InvalidKeyStoreEntryException::class, KeyStoreException::class)
         private fun loadPrivateKeyEntry(
             userId: String,
             deviceId: String,
@@ -304,13 +369,13 @@ internal class SecurityManager {
 
             val entryAlias = entryAlias(userId, deviceId, alias)
 
-            if (!standardKeyStore.containsAlias(entryAlias)) throw KeyStoreEntryNotFound(
+            if (!standardKeyStore.containsAlias(entryAlias)) throw KeyStoreEntryNotFoundException(
                 userId,
                 deviceId,
                 alias,
             )
 
-            if (!standardKeyStore.isKeyEntry(entryAlias)) throw InvalidKeyStoreEntry(
+            if (!standardKeyStore.isKeyEntry(entryAlias)) throw InvalidKeyStoreEntryException(
                 userId,
                 deviceId,
                 alias,

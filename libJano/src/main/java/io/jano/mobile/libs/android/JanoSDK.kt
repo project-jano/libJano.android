@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.util.Base64
 import io.jano.mobile.libs.android.exceptions.CertificateAlreadyExistsException
+import io.jano.mobile.libs.android.exceptions.InvalidPayloadException
+import io.jano.mobile.libs.android.exceptions.InvalidSecurePushNotificationException
 import io.jano.mobile.libs.android.models.*
 import io.jano.mobile.libs.android.security.Constants
 import io.jano.mobile.libs.android.security.SecurityManager
@@ -322,65 +324,26 @@ object JanoSDK {
         }
     }
 
+    /**
+     * Decrypts a secure using the public key for the given tuple: userId, deviceId and alias.
+     * @param userId identifier of the user who owns the certificates
+     * @param deviceId identifier of this device. Default value is JanoSDK.DefaultDeviceId
+     * @param alias identifier of the certificates. Default value is JanoSDK.DefaultAlias
+     * @param securedPayload the secured (encrypted) payload encoded in Base64
+     * @param signature the signature of the securedPayload in Base64
+     * @param isRemotePayload true if the secured payload for generated server side. False if it was generated on this device.
+     * @return the decrypted payload, which contains the plain text message, a fingerprint and a timestamp
+     */
     fun decryptNotification(
         userId: String,
         deviceId: String,
         alias: String = DefaultAlias,
         intent: Intent): Intent? {
 
-        try {
-            val securedPayload = intent.extras?.keySet()
-                ?.filter { it.startsWith("jano.p.") }
-                ?.sorted()
-                ?.map { intent.extras!!.getString(it) }
-                ?.joinToString()
-
-            val signature = intent.extras?.keySet()
-                ?.filter { it.startsWith("jano.s.") }
-                ?.sorted()
-                ?.map { intent.extras!!.getString(it) }
-                ?.joinToString()
-
-            if (securedPayload.isNullOrEmpty() || signature.isNullOrEmpty()) {
-                return null
-            }
-
-            val payload = SecurityManager.decrypt(
-                userId = userId,
-                deviceId = deviceId,
-                alias = alias,
-                securedPayload = securedPayload,
-                signature = signature,
-                useServerCertificate = true,
-            )
-
-            val spn = SecurePushNotification.from(payload.message)
-
-            if (spn.title.isNullOrEmpty() && spn.body.isNullOrEmpty() && spn.payload.isNullOrEmpty()) {
-                return null
-            }
-
-            intent.extras?.keySet()
-                ?.filter { ( it.startsWith("jano.s.") || it.startsWith("jano.p.") ) }
-                ?.forEach {
-                    intent.removeExtra(it)
-                }
-
-            spn.title?.let {
-                intent.putExtra("gcm.notification.title", it)
-            }
-            spn.body?.let {
-                intent.putExtra("gcm.notification.body", it)
-            }
-
-            spn.payload?.keys?.let {
-                it.forEach { key ->
-                    intent.putExtra(key, spn.payload[key])
-                }
-            }
-            return intent
+        return try {
+            SecurityManager.decryptPushNotification(userId, deviceId, alias, intent)
         } catch (e: Exception) {
-            return null
+            null
         }
     }
 }

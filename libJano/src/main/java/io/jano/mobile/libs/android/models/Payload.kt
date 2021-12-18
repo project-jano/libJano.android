@@ -1,6 +1,6 @@
 package io.jano.mobile.libs.android.models
 
-import io.jano.mobile.libs.android.exceptions.InvalidPayloadFormat
+import io.jano.mobile.libs.android.exceptions.InvalidPayloadException
 import org.json.JSONObject
 
 data class Payload constructor(
@@ -31,7 +31,7 @@ data class Payload constructor(
                     fingerprint = fingerprint,
                 )
             } catch (e: Exception) {
-                throw InvalidPayloadFormat()
+                throw InvalidPayloadException()
             }
         }
     }

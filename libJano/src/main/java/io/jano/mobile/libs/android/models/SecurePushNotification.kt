@@ -1,6 +1,6 @@
 package io.jano.mobile.libs.android.models
 
-import io.jano.mobile.libs.android.exceptions.InvalidPayloadFormat
+import io.jano.mobile.libs.android.exceptions.InvalidPayloadException
 import org.json.JSONObject
 
 data class SecurePushNotification private constructor(
@@ -31,7 +31,7 @@ data class SecurePushNotification private constructor(
                     payload = if (payload.isEmpty()) null else payload,
                 )
             } catch (e: Exception) {
-                throw InvalidPayloadFormat()
+                throw InvalidPayloadException()
             }
         }
     }
