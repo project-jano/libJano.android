@@ -32,8 +32,7 @@ task androidJavadoc(type: Javadoc) {
                 owner.classpath += variant.javaCompileProvider.get().classpath
             }
         }
-    }
-    else {
+    } else {
         source = sourceSets.main.allJava
         classpath += configurations.runtimeClasspath
         classpath += configurations.compileClasspath
@@ -60,8 +59,7 @@ task javaSourcesJar(type: Jar) {
     archiveClassifier.set('sources')
     if (plugins.hasPlugin('android-library')) {
         from android.sourceSets.main.java.srcDirs
-    }
-    else {
+    } else {
         from sourceSets.main.allSource
     }
     preserveFileTimestamps = false
@@ -74,8 +72,7 @@ afterEvaluate {
             release(MavenPublication) {
                 if (plugins.hasPlugin('android-library')) {
                     from components.release
-                }
-                else if (plugins.hasPlugin('java')) {
+                } else if (plugins.hasPlugin('java')) {
                     from components.java
                     jar.preserveFileTimestamps = false
                     jar.reproducibleFileOrder = true
@@ -108,7 +105,7 @@ afterEvaluate {
                         developer {
                             id = POM_DEVELOPER_ID
                             name = POM_DEVELOPER_NAME
-                            email =POM_DEVELOPER_MAIL
+                            email = POM_DEVELOPER_MAIL
                         }
                     }
                 }

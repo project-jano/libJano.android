@@ -6,7 +6,9 @@ import io.jano.mobile.libs.android.security.SecurityManager
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.util.*
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
 
 /**
  * Instrumented test, which will execute on an Android device.
