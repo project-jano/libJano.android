@@ -38,6 +38,20 @@ internal class SecurityManager {
             }
         }
 
+        fun hasCertificates(
+            userId: String,
+            deviceId: String,
+            alias: String,
+        ): Boolean {
+            return try {
+                val entryAlias = entryAlias(userId, deviceId, alias)
+                return standardKeyStore.containsAlias(entryAlias) &&
+                        standardKeyStore.isKeyEntry(entryAlias)
+            } catch (e: Exception) {
+                false
+            }
+        }
+
         fun generateCertificate(
             context: Context,
             userId: String,
@@ -104,20 +118,6 @@ internal class SecurityManager {
             kpg.initialize(parameterSpec)
             val keyPair = kpg.generateKeyPair()
             return keyPair.public
-        }
-
-        fun hasCertificates(
-            userId: String,
-            deviceId: String,
-            alias: String,
-        ): Boolean {
-            return try {
-                val entryAlias = entryAlias(userId, deviceId, alias)
-                return standardKeyStore.containsAlias(entryAlias) &&
-                        standardKeyStore.isKeyEntry(entryAlias)
-            } catch (e: Exception) {
-                false
-            }
         }
 
         fun getCertificates(
@@ -287,14 +287,6 @@ internal class SecurityManager {
             return s.verify(Base64.decode(signature, Base64.DEFAULT))
         }
 
-        private fun entryAlias(
-            userId: String,
-            deviceId: String,
-            alias: String,
-        ): String {
-            return "$userId::$deviceId::$alias"
-        }
-
         @Throws(KeyStoreEntryNotFound::class, InvalidKeyStoreEntry::class, KeyStoreException::class)
         private fun loadPrivateKeyEntry(
             userId: String,
@@ -320,13 +312,13 @@ internal class SecurityManager {
                 ?: throw KeyStoreException("could not load private key.")
         }
 
-        private fun secureRandom(): SecureRandom {
-            val secureRandom = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                SecureRandom.getInstanceStrong()
-            } else {
-                SecureRandom()
-            }
-            return secureRandom
+
+        private fun entryAlias(
+            userId: String,
+            deviceId: String,
+            alias: String,
+        ): String {
+            return "$userId::$deviceId::$alias"
         }
 
         private fun getSignature(signatureAlgorithm: String): Signature {
@@ -338,5 +330,13 @@ internal class SecurityManager {
             return Signature.getInstance(algorithmImpl)
         }
 
+        private fun secureRandom(): SecureRandom {
+            val secureRandom = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                SecureRandom.getInstanceStrong()
+            } else {
+                SecureRandom()
+            }
+            return secureRandom
+        }
     }
 }

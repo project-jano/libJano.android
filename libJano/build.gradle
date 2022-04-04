@@ -10,8 +10,6 @@ android {
     defaultConfig {
         minSdk 23
         targetSdk 31
-        versionCode rootProject.ext.lib_jano_version_code
-        versionName rootProject.ext.lib_jano_version
 
         consumerProguardFiles "consumer-rules.pro"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
