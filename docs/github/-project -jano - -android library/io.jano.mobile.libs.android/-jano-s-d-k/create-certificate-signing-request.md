@@ -3,7 +3,7 @@
 # createCertificateSigningRequest
 
 [androidJvm]\
-fun [createCertificateSigningRequest](create-certificate-signing-request.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), userId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), deviceId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = DefaultDeviceId, alias: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = DefaultAlias, defaultCertificate: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = true): [CertificateSigningRequest](../../io.jano.mobile.libs.android.models/-certificate-signing-request/index.md)
+fun [createCertificateSigningRequest](create-certificate-signing-request.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), userId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), deviceId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), alias: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = DefaultAlias, defaultCertificate: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = true): [CertificateSigningRequest](../../io.jano.mobile.libs.android.models/-certificate-signing-request/index.md)
 
 Generates certificate signing request for the given tuple: userId, deviceId and alias
 

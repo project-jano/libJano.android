@@ -3,7 +3,7 @@ package io.jano.mobile.tests.libs.application.api.openapi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import java.util.*
+import java.util.Date
 
 object Serializer {
     @JvmStatic

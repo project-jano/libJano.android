@@ -3,7 +3,7 @@
 # encrypt
 
 [androidJvm]\
-fun [encrypt](encrypt.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), userId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), deviceId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = DefaultDeviceId, alias: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = DefaultAlias, message: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), forRemoteDecryption: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = true): [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html)&lt;[SecuredPayload](../../io.jano.mobile.libs.android.models/-secured-payload/index.md)&gt;
+fun [encrypt](encrypt.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), userId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), deviceId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), alias: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = DefaultAlias, message: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), forRemoteDecryption: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = true): [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html)&lt;[SecuredPayload](../../io.jano.mobile.libs.android.models/-secured-payload/index.md)&gt;
 
 Encrypts a message, either for local or remote decryption, for the given tuple: userId, deviceId and alias
 

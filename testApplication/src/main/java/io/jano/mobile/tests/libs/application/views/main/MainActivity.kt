@@ -14,7 +14,6 @@ import io.jano.mobile.tests.libs.application.R
 import io.jano.mobile.tests.libs.application.views.main.viewmodel.MainViewModel
 import io.jano.mobile.tests.libs.application.views.securedpayload.ViewSecuredPayloadActivity
 
-
 class MainActivity : AppCompatActivity() {
 
     private val viewModel: MainViewModel by viewModels()
@@ -114,6 +113,6 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.decode_payload).isEnabled =
             !loading && !viewModel.currentCertificate.value.isNullOrEmpty()
-                    && viewModel.currentCertificate.value!!.size > 1
+                && viewModel.currentCertificate.value!!.size > 1
     }
 }

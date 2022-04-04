@@ -7,9 +7,9 @@ import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import android.util.Base64
 import io.jano.mobile.libs.android.SecurityOptions
-import io.jano.mobile.libs.android.exceptions.*
 import io.jano.mobile.libs.android.exceptions.InvalidKeyStoreEntryException
 import io.jano.mobile.libs.android.exceptions.InvalidPayloadException
+import io.jano.mobile.libs.android.exceptions.InvalidSecurePushNotificationException
 import io.jano.mobile.libs.android.exceptions.InvalidSignatureException
 import io.jano.mobile.libs.android.exceptions.KeyStoreEntryNotFoundException
 import io.jano.mobile.libs.android.exceptions.MissingRootCertificateException
@@ -21,12 +21,18 @@ import org.spongycastle.jce.provider.BouncyCastleProvider
 import org.spongycastle.operator.jcajce.JcaContentSignerBuilder
 import org.spongycastle.pkcs.jcajce.JcaPKCS10CertificationRequestBuilder
 import java.math.BigInteger
-import java.security.*
+import java.security.KeyPairGenerator
+import java.security.KeyStore
+import java.security.KeyStoreException
+import java.security.PublicKey
+import java.security.SecureRandom
+import java.security.Security
+import java.security.Signature
 import java.security.cert.X509Certificate
-import java.util.*
+import java.util.Date
+import java.util.Locale
 import javax.crypto.Cipher
 import javax.security.auth.x500.X500Principal
-
 
 internal class SecurityManager {
 
@@ -62,9 +68,9 @@ internal class SecurityManager {
             val parameterSpec = KeyGenParameterSpec.Builder(
                 entryAlias,
                 KeyProperties.PURPOSE_SIGN or
-                        KeyProperties.PURPOSE_VERIFY or
-                        KeyProperties.PURPOSE_DECRYPT or
-                        KeyProperties.PURPOSE_ENCRYPT
+                    KeyProperties.PURPOSE_VERIFY or
+                    KeyProperties.PURPOSE_DECRYPT or
+                    KeyProperties.PURPOSE_ENCRYPT
             ).run {
 
                 val serialNumber = BigInteger(64, SecureRandom())
@@ -72,7 +78,7 @@ internal class SecurityManager {
                 val issuer = context.applicationInfo.loadLabel(context.packageManager)
 
                 val subjectPrincipal =
-                    X500Principal("CN=$subject, UID=$userId, O=${issuer}, OU=${context.packageName}, C=${Locale.getDefault().country}")
+                    X500Principal("CN=$subject, UID=$userId, O=$issuer, OU=${context.packageName}, C=${Locale.getDefault().country}")
 
                 setCertificateSubject(subjectPrincipal)
                 setCertificateNotBefore(notBefore)
@@ -118,7 +124,7 @@ internal class SecurityManager {
             return try {
                 val entryAlias = entryAlias(userId, deviceId, alias)
                 return standardKeyStore.containsAlias(entryAlias) &&
-                        standardKeyStore.isKeyEntry(entryAlias)
+                    standardKeyStore.isKeyEntry(entryAlias)
             } catch (e: Exception) {
                 false
             }
@@ -148,18 +154,18 @@ internal class SecurityManager {
             val certificate = privateKeyEntry.certificate as X509Certificate
 
             return "${Constants.CSR_BEGIN}\n${
-                Base64.encodeToString(
-                    JcaPKCS10CertificationRequestBuilder(
-                        certificate.subjectX500Principal, certificate.publicKey
-                    )
-                        .build(
-                            JcaContentSignerBuilder(Constants.RSA_SIGNATURE_ALGORITHM)
-                                .setSecureRandom(SecureRandom())
-                                .build(privateKey)
-                        )
-                        .encoded,
-                    Base64.DEFAULT
+            Base64.encodeToString(
+                JcaPKCS10CertificationRequestBuilder(
+                    certificate.subjectX500Principal, certificate.publicKey
                 )
+                    .build(
+                        JcaContentSignerBuilder(Constants.RSA_SIGNATURE_ALGORITHM)
+                            .setSecureRandom(SecureRandom())
+                            .build(privateKey)
+                    )
+                    .encoded,
+                Base64.DEFAULT
+            )
             }${Constants.CSR_END}"
         }
 
@@ -235,7 +241,6 @@ internal class SecurityManager {
             val privateKeyEntry = loadPrivateKeyEntry(userId, deviceId, alias)
             val certificates = privateKeyEntry.certificateChain
             val privateKey = privateKeyEntry.privateKey
-
 
             if (useServerCertificate && certificates.size < 2) throw MissingRootCertificateException(
                 userId,
@@ -360,7 +365,11 @@ internal class SecurityManager {
             return "$userId::$deviceId::$alias"
         }
 
-        @Throws(KeyStoreEntryNotFoundException::class, InvalidKeyStoreEntryException::class, KeyStoreException::class)
+        @Throws(
+            KeyStoreEntryNotFoundException::class,
+            InvalidKeyStoreEntryException::class,
+            KeyStoreException::class
+        )
         private fun loadPrivateKeyEntry(
             userId: String,
             deviceId: String,
@@ -402,6 +411,5 @@ internal class SecurityManager {
 
             return Signature.getInstance(algorithmImpl)
         }
-
     }
 }

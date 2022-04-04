@@ -7,4 +7,11 @@ val [DefaultSecurityOptions](-default-security-options.md): [SecurityOptions](..
 
 This is the default security option for key-pair
 
-<ul><li>User authentication is required</li><li>User presence is required</li><li>unlocked device is required</li><li>key-pair is invalidated when biometric enrollment changes</li></ul>
+- 
+   User authentication is required
+- 
+   User presence is required
+- 
+   unlocked device is required
+- 
+   key-pair is invalidated when biometric enrollment changes

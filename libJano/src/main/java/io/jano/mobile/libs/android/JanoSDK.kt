@@ -4,16 +4,17 @@ import android.content.Context
 import android.content.Intent
 import android.util.Base64
 import io.jano.mobile.libs.android.exceptions.CertificateAlreadyExistsException
-import io.jano.mobile.libs.android.exceptions.InvalidPayloadException
-import io.jano.mobile.libs.android.exceptions.InvalidSecurePushNotificationException
-import io.jano.mobile.libs.android.models.*
+import io.jano.mobile.libs.android.models.CertificateSigningRequest
+import io.jano.mobile.libs.android.models.Device
+import io.jano.mobile.libs.android.models.Payload
+import io.jano.mobile.libs.android.models.SecuredPayload
 import io.jano.mobile.libs.android.security.Constants
 import io.jano.mobile.libs.android.security.SecurityManager
 import java.io.ByteArrayInputStream
 import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
-import java.util.*
-
+import java.util.Calendar
+import java.util.Date
 
 /**
  * JanoSDK
@@ -220,7 +221,7 @@ object JanoSDK {
                 }
                 .filter {
                     it.startsWith(Constants.CERT_BEGIN) ||
-                            it.startsWith("\n${Constants.CERT_BEGIN}")
+                        it.startsWith("\n${Constants.CERT_BEGIN}")
                 }
                 .map {
                     it.replace(Constants.CERT_BEGIN, "")
@@ -338,7 +339,8 @@ object JanoSDK {
         userId: String,
         deviceId: String,
         alias: String = DefaultAlias,
-        intent: Intent): Intent? {
+        intent: Intent
+    ): Intent? {
 
         return try {
             SecurityManager.decryptPushNotification(userId, deviceId, alias, intent)

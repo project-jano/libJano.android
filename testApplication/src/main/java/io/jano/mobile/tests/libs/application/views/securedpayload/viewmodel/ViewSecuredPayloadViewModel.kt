@@ -53,5 +53,4 @@ class ViewSecuredPayloadViewModel(application: Application) : AndroidViewModel(a
                 }
             }
     }
-
 }

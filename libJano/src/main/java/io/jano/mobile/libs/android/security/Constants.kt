@@ -25,6 +25,6 @@ internal class Constants {
 
         const val KEY_ALGORITHM = KeyProperties.KEY_ALGORITHM_RSA
 
-        const val CIPHER_TRANSFORMATION = "${KEY_ALGORITHM}/${BLOCK_MODE}/${PADDING}"
+        const val CIPHER_TRANSFORMATION = "$KEY_ALGORITHM/$BLOCK_MODE/$PADDING"
     }
 }

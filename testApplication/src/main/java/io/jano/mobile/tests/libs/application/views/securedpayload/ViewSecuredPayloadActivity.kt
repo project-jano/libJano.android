@@ -60,5 +60,4 @@ class ViewSecuredPayloadActivity : AppCompatActivity() {
             View.GONE
         }
     }
-
 }

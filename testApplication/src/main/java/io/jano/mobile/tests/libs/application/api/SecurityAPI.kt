@@ -12,7 +12,15 @@
 package io.jano.mobile.tests.libs.application.api
 
 import io.jano.mobile.libs.android.models.CertificateSigningRequest
-import io.jano.mobile.tests.libs.application.api.openapi.*
+import io.jano.mobile.tests.libs.application.api.openapi.ApiClient
+import io.jano.mobile.tests.libs.application.api.openapi.ClientError
+import io.jano.mobile.tests.libs.application.api.openapi.ClientException
+import io.jano.mobile.tests.libs.application.api.openapi.RequestConfig
+import io.jano.mobile.tests.libs.application.api.openapi.RequestMethod
+import io.jano.mobile.tests.libs.application.api.openapi.ResponseType
+import io.jano.mobile.tests.libs.application.api.openapi.ServerError
+import io.jano.mobile.tests.libs.application.api.openapi.ServerException
+import io.jano.mobile.tests.libs.application.api.openapi.Success
 import java.net.URLEncoder
 
 class SecurityAPI(basePath: String = "http://localhost/v2") : ApiClient(basePath) {

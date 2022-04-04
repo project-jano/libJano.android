@@ -11,7 +11,6 @@ import java.util.logging.Level
 import java.util.logging.LogRecord
 import java.util.logging.Logger
 
-
 /**
  * An OkHttp interceptor that logs requests as curl shell commands. They can then
  * be copied, pasted and executed inside a terminal environment. This might be
@@ -84,5 +83,4 @@ class CurlLoggingInterceptor @JvmOverloads constructor(private val logger: Logge
     companion object {
         private val UTF8 = Charset.forName("UTF-8")
     }
-
 }

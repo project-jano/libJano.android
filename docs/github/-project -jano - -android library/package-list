@@ -1,5 +1,8 @@
 $dokka.format:gfm-v1
 $dokka.linkExtension:md
+$dokka.location:io.jano.mobile.libs.android.exceptions////PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.exceptions/index.md
+$dokka.location:io.jano.mobile.libs.android.exceptions/InvalidSecurePushNotificationException///PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.exceptions/-invalid-secure-push-notification-exception/index.md
+$dokka.location:io.jano.mobile.libs.android.exceptions/InvalidSecurePushNotificationException/InvalidSecurePushNotificationException/#kotlin.String/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.exceptions/-invalid-secure-push-notification-exception/-invalid-secure-push-notification-exception.md
 $dokka.location:io.jano.mobile.libs.android.models////PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/index.md
 $dokka.location:io.jano.mobile.libs.android.models/CertificateSigningRequest.Companion///PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-certificate-signing-request/-companion/index.md
 $dokka.location:io.jano.mobile.libs.android.models/CertificateSigningRequest///PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-certificate-signing-request/index.md
@@ -12,6 +15,11 @@ $dokka.location:io.jano.mobile.libs.android.models/Payload/fingerprint/#/Pointin
 $dokka.location:io.jano.mobile.libs.android.models/Payload/message/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-payload/message.md
 $dokka.location:io.jano.mobile.libs.android.models/Payload/timestamp/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-payload/timestamp.md
 $dokka.location:io.jano.mobile.libs.android.models/Payload/toJSONString/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-payload/to-j-s-o-n-string.md
+$dokka.location:io.jano.mobile.libs.android.models/SecurePushNotification.Companion///PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-secure-push-notification/-companion/index.md
+$dokka.location:io.jano.mobile.libs.android.models/SecurePushNotification///PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-secure-push-notification/index.md
+$dokka.location:io.jano.mobile.libs.android.models/SecurePushNotification/body/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-secure-push-notification/body.md
+$dokka.location:io.jano.mobile.libs.android.models/SecurePushNotification/payload/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-secure-push-notification/payload.md
+$dokka.location:io.jano.mobile.libs.android.models/SecurePushNotification/title/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-secure-push-notification/title.md
 $dokka.location:io.jano.mobile.libs.android.models/SecuredPayload///PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-secured-payload/index.md
 $dokka.location:io.jano.mobile.libs.android.models/SecuredPayload/SecuredPayload/#kotlin.String#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-secured-payload/-secured-payload.md
 $dokka.location:io.jano.mobile.libs.android.models/SecuredPayload/deviceId/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android.models/-secured-payload/device-id.md
@@ -22,11 +30,11 @@ $dokka.location:io.jano.mobile.libs.android.models/SecuredPayload/toJSONString/#
 $dokka.location:io.jano.mobile.libs.android////PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/index.md
 $dokka.location:io.jano.mobile.libs.android/JanoSDK///PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/index.md
 $dokka.location:io.jano.mobile.libs.android/JanoSDK/DefaultAlias/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/-default-alias.md
-$dokka.location:io.jano.mobile.libs.android/JanoSDK/DefaultDeviceId/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/-default-device-id.md
 $dokka.location:io.jano.mobile.libs.android/JanoSDK/DefaultSecurityOptions/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/-default-security-options.md
 $dokka.location:io.jano.mobile.libs.android/JanoSDK/ZeroSecurityOptions/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/-zero-security-options.md
 $dokka.location:io.jano.mobile.libs.android/JanoSDK/createCertificateSigningRequest/#android.content.Context#kotlin.String#kotlin.String#kotlin.String#kotlin.Boolean/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/create-certificate-signing-request.md
 $dokka.location:io.jano.mobile.libs.android/JanoSDK/decrypt/#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Boolean/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/decrypt.md
+$dokka.location:io.jano.mobile.libs.android/JanoSDK/decryptNotification/#kotlin.String#kotlin.String#kotlin.String#android.content.Intent/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/decrypt-notification.md
 $dokka.location:io.jano.mobile.libs.android/JanoSDK/encrypt/#android.content.Context#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Boolean/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/encrypt.md
 $dokka.location:io.jano.mobile.libs.android/JanoSDK/generateCertificate/#android.content.Context#kotlin.String#kotlin.String#kotlin.String#kotlin.String#java.util.Date#java.util.Date#io.jano.mobile.libs.android.SecurityOptions#kotlin.Boolean/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/generate-certificate.md
 $dokka.location:io.jano.mobile.libs.android/JanoSDK/getCertificates/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-jano-s-d-k/get-certificates.md
@@ -41,5 +49,6 @@ $dokka.location:io.jano.mobile.libs.android/SecurityOptions/unlockedDeviceRequir
 $dokka.location:io.jano.mobile.libs.android/SecurityOptions/userAuthenticationRequired/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-security-options/user-authentication-required.md
 $dokka.location:io.jano.mobile.libs.android/SecurityOptions/userPresenceRequired/#/PointingToDeclaration/-project -jano - -android library/io.jano.mobile.libs.android/-security-options/user-presence-required.md
 io.jano.mobile.libs.android
+io.jano.mobile.libs.android.exceptions
 io.jano.mobile.libs.android.models
 

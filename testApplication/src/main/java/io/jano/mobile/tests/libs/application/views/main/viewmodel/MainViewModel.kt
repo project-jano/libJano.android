@@ -53,9 +53,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 subject = subject,
                 options = options
             )
-                .onSuccess {
+                .onSuccess { certificate ->
                     viewModelScope.launch(Dispatchers.Main) {
-                        _currentCertificate.value = listOf(it)
+                        _currentCertificate.value = listOf(certificate)
                         _currentError.value = null
                         _loading.value = false
                     }
@@ -204,5 +204,4 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 }
             }
     }
-
 }
