@@ -3,8 +3,8 @@ id: getting_started
 categories: Samples 
 tags: android, jano, mobile, sample 
 status: Published 
-authors: Ezequiel (Kimi) Aceto Feedback
-Link: https://eaceto.dev
+authors: Ezequiel (Kimi) Aceto 
+Feedback Link: https://eaceto.dev
 
 <!-- ------------------ -->
 ## Adding as a dependency

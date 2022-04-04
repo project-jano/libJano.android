@@ -1,0 +1,134 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="getting_started"
+                  title=""
+                  environment="web"
+                  feedback-link="https://eaceto.dev">
+    
+      <google-codelab-step label="Adding as a dependency" duration="1">
+        <p>Let&#39;s start by adding libJano as a dependency of your Android project</p>
+<ol type="1">
+<li>Add <strong>jitpack.io</strong> maven repository to your root <strong>build.gradle</strong></li>
+</ol>
+<pre><code language="language-groovy" class="language-groovy">    allprojects {
+    repositories {
+        ...
+        maven { url &#39;https://jitpack.io&#39; }
+    }
+}
+</code></pre>
+<ol type="1" start="2">
+<li>In your application&#39;s <strong>build.gradle</strong> add the dependency</li>
+</ol>
+<pre><code language="language-groovy" class="language-groovy">    dependencies {
+    implementation &#39;com.github.project-jano:user-service.go:1.0.0&#39;
+}
+</code></pre>
+<ol type="1" start="3">
+<li>As your Gradle files have changed, you have to sync your Android project.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Integrating libJano" duration="3">
+        <p>libJano X uses cryptography in all its operations. This means that in order to use high-level operations, we need to create a series of keys and certificates and send them to our backend.</p>
+<p>Calling <strong>JanoSDK.generateCertificate</strong> is necessary only once per user installation. libJano is also able to handle multi-user applications, as certificates live acrross apps restarts / users-logout, unless deleted explicitly.</p>
+<pre><code language="language-kotlin" class="language-kotlin">    val userId = &#34;your-user-id&#34;
+val deviceId = &#34;a-device-id&#34; // i.e.: Push Notification id of the device
+val subject = &#34;a-name&#34; // a.k.a. Common Name
+
+// use JanoSDK.ZeroSecurityOptions only on tests or during development
+val options = JanoSDK.userPresenceRequired
+
+JanoSDK.generateCertificate(
+    context = context,
+    userId = userId,
+    deviceId = deviceId,
+    subject = subject,
+    options = options
+)
+    .onSuccess { selfSignedCertificate -&gt;
+        // a self-signed certificate
+    }
+    .onFailure { error -&gt;
+        // handle error
+    }
+</code></pre>
+<p>Once you have a self-signed certificate, it should be sent to the backend so it can be stored and sign by Jano&#39;s user service.</p>
+<pre><code language="language-kotlin" class="language-kotlin">val csr = JanoSDK.createCertificateSigningRequest(
+    context = context,
+    userId = userId,
+    deviceId = deviceId,
+)
+
+/// Send the CSR to your backend, who will call Jano.
+...
+
+JanoSDK.updateWithCertificateChain(
+    userId = userId,
+    deviceId = deviceId,
+    certificatesChain = it
+)
+    .onSuccess { certificateChain -&gt;
+        // certificateChain can be ignored.
+    }
+    .onFailure { error -&gt;
+        // handle error
+    }
+</code></pre>
+<p>Now you are ready to use all the features of <strong>Jano</strong> in your Android app!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Decrypting Secure Push Notifications" duration="1">
+        <p>When receiving a Push Notification encrypted with Jano, a decryption process should be done before the (Android) OS shows the notification to the user.</p>
+<p>Doing this requires to decrypt the <strong>intent</strong> received from the Messaging Service and returning a modified one to the Operating System.</p>
+<pre><code language="language-kotlin" class="language-kotlin">class AppMessagingService : FirebaseMessagingService() {
+
+    override fun handleIntent(intent: Intent) {
+        val userId = &#34;...&#34;
+        val deviceId = &#34;...&#34;
+
+        val decryptedIntent = JanoSDK.decryptNotification(userId, deviceId, intent = intent)
+        super.handleIntent(decryptedIntent ?: intent)
+    }
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
