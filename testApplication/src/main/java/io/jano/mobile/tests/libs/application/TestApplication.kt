@@ -9,7 +9,9 @@ import com.google.firebase.messaging.FirebaseMessaging
 
 class TestApplication : Application() {
 
-    private val TAG = "TestApplication"
+    companion object {
+        private const val TAG = "TestApplication"
+    }
 
     override fun onCreate() {
         super.onCreate()

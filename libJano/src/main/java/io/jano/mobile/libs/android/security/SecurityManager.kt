@@ -295,7 +295,7 @@ internal class SecurityManager {
                 throw InvalidPayloadException()
             }
 
-            val payload = SecurityManager.decrypt(
+            val payload = decrypt(
                 userId = userId,
                 deviceId = deviceId,
                 alias = alias,
